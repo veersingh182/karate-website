@@ -1,3 +1,28 @@
+.container {
+  margin: 0 2rem;
+  padding: 0 2rem;
+  width: 80%;
+  margin: 10rem auto; }
+
+.all {
+  display: flex;
+  height: 100%; }
+
+.cl-1 {
+  object-fit: cover;
+  height: 40%;
+  margin: 2rem; }
+
+.heading_h2 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  background-image: linear-gradient(-20deg, #00c7a9, #313b47);
+  color: transparent;
+  -webkit-background-clip: text;
+  text-shadow: 0.3rem 0.7rem 0.8rem rgba(0, 0, 0, 0.4); }
+
 *,
 *::after,
 *::before {
@@ -9,31 +34,22 @@ html {
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box; }
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #E4E6EB; }
 
 .header {
   background-image: url(/img/headerBG.png);
   height: 100vh;
   background-size: cover;
-  position: relative; }
+  position: relative;
+  overflow: auto; }
   .header__navbar {
-    display: flex;
-    justify-content: space-between;
+    display: inline-flex;
     align-items: center;
-    padding: 4.5rem 10rem; }
-
-.navlinks__links {
-  list-style: none; }
-  .navlinks__links__item {
-    display: inline-block;
-    padding: 0 3rem;
-    font-family: 'Ubuntu', sans-serif; }
-
-.link {
-  font-size: 1.6rem;
-  color: white;
-  text-transform: uppercase;
-  text-decoration: none; }
+    justify-content: space-around;
+    padding: 4.5rem 4.5rem;
+    min-width: 100%;
+    position: fixed; }
 
 .academy-logo {
   width: 9rem;
@@ -46,43 +62,112 @@ body {
   transform: translateY(-5px) scale(1.1); }
 
 .logotext {
-  transform: translateX(-15rem); }
+  transform: translateX(-15rem);
+  font-family: 'Arial', sans-serif; }
   .logotext__line1 {
     display: block;
     color: white;
-    font-size: 2.3rem;
-    font-family: 'Ubuntu', sans-serif; }
+    font-size: 2.3rem; }
   .logotext__line2 {
     display: inline-block;
     color: white;
-    font-size: 2.3rem;
+    font-size: 2.3rem; }
+
+.navlinks__links {
+  list-style: none;
+  color: black; }
+  .navlinks__links li {
+    display: inline-block;
     font-family: 'Ubuntu', sans-serif; }
+  .navlinks__links li:not(:last-child) {
+    margin-right: .5rem; }
+  .navlinks__links .active {
+    background-image: linear-gradient(-60deg, #1fa48c, #167a64, #0f645a);
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2); }
+  .navlinks__links a {
+    font-size: 1.6rem;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    transition: background-image 5s ease-in-out; }
+    .navlinks__links a:hover, .navlinks__links a::after, .navlinks__links a::before {
+      background-image: linear-gradient(-60deg, #1fa4bb, #167a8b, #0f6474);
+      border-radius: 3px;
+      box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2); }
+    .navlinks__links a:active {
+      background-image: linear-gradient(-60deg, #1fa48c, #167a64, #0f645a);
+      border-radius: 3px;
+      box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4); }
 
 .welcome_text {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #f7f7f7;
-  margin-left: 11rem;
-  margin-top: 9rem;
-  letter-spacing: 3px;
-  word-spacing: 7px;
-  line-height: 1.4;
+  position: absolute;
+  top: 40%;
+  left: 23%;
+  transform: translate(-26%, 0);
   font-size: 1.7rem; }
+  .welcome_text .academyName {
+    word-spacing: 0.7rem;
+    line-height: 1.4;
+    color: #BBD2C5; }
+  .welcome_text .slogan-Hindi {
+    display: inline-block;
+    font-family: 'Hind', sans-serif;
+    margin-top: 2rem;
+    word-spacing: 1rem;
+    letter-spacing: 0.2rem;
+    background-image: linear-gradient(-70deg, #BBD2C5, #6dd5ed);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4); }
 
 .btn-bordered {
   position: absolute;
-  top: 57rem;
-  left: 11rem; }
+  bottom: 25%;
+  left: 15%; }
 
 .explore_more_btn {
   text-decoration: none;
-  border-bottom: 3.2px solid #2d679e;
-  font-size: 2rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
   text-transform: uppercase;
-  font-family: 'Hammersmith One' , sans-serif;
   border-radius: .8rem;
-  transition: all .5s;
-  padding: 5px 7px 2px 7px; }
+  padding: 5px 7px 2px 7px;
+  border-bottom: 3.2px solid #2d679e;
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
+  transition: all .5s; }
 
 .explore_more_btn:hover {
   background-color: #2d679e;
-  color: #000; }
+  color: #000;
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
+  border-radius: 4.2px; }
+  .explore_more_btn:hover:active {
+    background-color: #295e91;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.35); }
+
+.section1 {
+  margin: 15rem 0 30rem 0; }
+
+.updates {
+  margin-top: 25rem; }
+
+.section-main {
+  background-color: #b5d2dd; }
+
+.header-aboutUs {
+  position: relative; }
+
+.header-aboutUs {
+  margin-bottom: 500rem; }
+  .header-aboutUs--Div {
+    top: 0;
+    height: 25vh;
+    width: 100%;
+    background-image: linear-gradient(to left top, #00c7a9, #313b47);
+    position: fixed; }
