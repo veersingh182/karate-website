@@ -175,7 +175,7 @@ body {
     width: 38vw;
     height: 15rem;
     margin-bottom: 10rem;
-    background-image: linear-gradient(to right bottom, #bfacc9, #d3bfdd);
+    background-image: linear-gradient(to right bottom, #bfacc9, #b89fc4);
     position: relative; }
     .container-rankHolder .rank-holders--1 {
       transform: skew(-15deg); }
@@ -222,7 +222,7 @@ body {
         transform: skew(15deg) translateY(-50%);
         position: absolute;
         top: 50%;
-        right: 27rem; }
+        left: 10rem; }
         .container-rankHolder .rank-holders--2 .details--1 .name--1 {
           font-family: 'Cookie', cursive;
           font-size: 3.7rem;
@@ -285,7 +285,7 @@ body {
         transform: skew(15deg) translateY(-50%);
         position: absolute;
         top: 50%;
-        right: 27rem; }
+        left: 10rem; }
         .container-rankHolder .rank-holders--4 .details--1 .name--1 {
           font-family: 'Cookie', cursive;
           font-size: 3.7rem;
@@ -303,6 +303,47 @@ body {
           font-weight: 300;
           letter-spacing: 2px;
           margin-top: -10px; }
+
+.reviews {
+  height: 40vh;
+  background-image: linear-gradient(to right bottom, #bfacc942, #b89fc449);
+  margin: 30rem 0 2px 0;
+  position: relative; }
+  .reviews .right-arrow-reviews {
+    position: absolute;
+    top: 50%;
+    right: 6%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    cursor: pointer; }
+    .reviews .right-arrow-reviews:hover {
+      transform: scale(1.1) translateY(-50%);
+      text-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); }
+    .reviews .right-arrow-reviews:active {
+      transform: scale(1) translateY(-50%);
+      text-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3); }
+  .reviews .left-arrow-reviews {
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    cursor: pointer; }
+    .reviews .left-arrow-reviews:hover {
+      transform: scale(1.1) translateY(-50%);
+      text-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); }
+    .reviews .left-arrow-reviews:active {
+      transform: scale(1) translateY(-50%);
+      text-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3); }
+  .reviews .review {
+    width: 70%;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 2rem;
+    color: #44222d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 .section1 {
   margin: 15rem 0 30rem 0; }

@@ -225,7 +225,7 @@ body {
         height: 15rem;
         margin-bottom: 10rem;
         // clip-path: polygon(10% 0,100% 0,90% 100%, 0 100% );
-        background-image: linear-gradient(to right bottom, #bfacc9,#d3bfdd);
+        background-image: linear-gradient(to right bottom, #bfacc9,#b89fc4);
         position: relative;
 
         &--1{
@@ -248,7 +248,7 @@ body {
                 left: 27rem;
 
                 .name--1{
-                    
+
                     font-family: 'Cookie', cursive;
                     font-size: 3.7rem;
                     letter-spacing: 2.5px;
@@ -290,7 +290,8 @@ body {
                 transform: skew(15deg) translateY(-50%);
                 position: absolute;
                 top: 50%;
-                right: 27rem;
+                left: 10rem;
+                
 
                 .name--1{
                     font-family: 'Cookie', cursive;
@@ -376,7 +377,7 @@ body {
                 transform: skew(15deg) translateY(-50%);
                 position: absolute;
                 top: 50%;
-                right: 27rem;
+                left: 10rem;
 
                 .name--1{
                     font-family: 'Cookie', cursive;
@@ -402,5 +403,64 @@ body {
                 }
             }
         }
+    }
+}
+
+.reviews{
+    
+    height: 40vh;
+    background-image: linear-gradient(to right bottom, #bfacc942,#b89fc449);
+    margin: 30rem 0 2px 0;
+    position: relative;
+
+    .right-arrow-reviews{
+        position: absolute;
+        top: 50%;
+        right: 6%;
+        transform: translateY(-50%);
+        font-size: 4rem;
+        cursor: pointer;
+
+        &:hover{
+            transform: scale(1.1) translateY(-50%);
+            text-shadow: 0 1rem 1rem rgba($color: #000000, $alpha: .2);
+        }
+        &:active{
+            transform: scale(1) translateY(-50%);
+            text-shadow: 0 1rem 1rem rgba($color: #000000, $alpha: .3);
+
+        }
+
+    }
+    .left-arrow-reviews{
+        position: absolute;
+        top: 50%;
+        left: 6%;
+        transform: translateY(-50%);
+        font-size: 4rem;
+        cursor: pointer;
+
+        &:hover{
+            transform: scale(1.1) translateY(-50%);
+            text-shadow: 0 1rem 1rem rgba($color: #000000, $alpha: .2);
+        }
+        &:active{
+            transform: scale(1) translateY(-50%);
+            text-shadow: 0 1rem 1rem rgba($color: #000000, $alpha: .3);
+        }
+    }
+
+
+    .review{
+        width: 70%;
+        font-family: 'Exo 2', sans-serif;
+        font-size: 2rem;
+        color: #44222d;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
     }
 }
