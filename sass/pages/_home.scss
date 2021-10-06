@@ -11,7 +11,6 @@ html{
 }
 
 body {
-    font-family: 'Ubuntu', sans-serif;
     background-color: #E4E6EB;
 }
 
@@ -58,28 +57,37 @@ body {
     transform: translateY(-5px) scale(1.1);
 }
 
+.logotext-click{
+    text-decoration: none;
 
-.logotext{
+    .logotext{
 
-    transform: translateX(-15rem);
-    font-family: 'Arial', sans-serif;
-    color: floralwhite;
+        transform: translateX(-15rem);
+        font-family: 'Arial', sans-serif;     
     
+        &__line1{
+            display: block;
+            color: rgba(255, 250, 240, 0.891);
+            font-size: 2.3rem;
+        }
     
-    
-
-    &__line1{
-        display: block;
-        color: white;
-        font-size: 2.3rem;
+        &__line2{
+            display: inline-block;
+            color: rgba(255, 250, 240, 0.891);
+            font-size: 2.3rem;
+        }
+    }
+    &:hover{
+        color: floralwhite;
+        text-shadow: 0 1rem 1.5rem rgba($color: #000000, $alpha: .2);
     }
 
-    &__line2{
-        display: inline-block;
-        color: white;
-        font-size: 2.3rem;
+    &:active{
+        text-shadow: 0 1rem 1.5rem rgba($color: #000000, $alpha: .3);
+        transform: translateY(.4px);
     }
 }
+
 
 
 .navlinks{
@@ -112,7 +120,6 @@ body {
             text-transform: uppercase;
             text-decoration: none;
             padding: 1rem 2rem;
-            transition: background-image 5s ease-in-out;
 
             &:hover, &::after, &::before{
                 
@@ -123,11 +130,10 @@ body {
             }
 
             &:active{
-                
+                transform: translateY(2px);
                 background-image: linear-gradient(-60deg,rgb(31, 164, 140) ,rgb(22, 122, 100), rgb(15, 100, 90));
                 border-radius: 3px;
                 box-shadow: 0 1.5rem 2rem rgba($color: #000000, $alpha: .4);
-
             }
         }
 
@@ -150,11 +156,7 @@ body {
     .academyName{
         word-spacing: 0.7rem;
         line-height: 1.4;
-        // background-image: linear-gradient(-70deg,#BBD2C5,#6dd5ed);
-        
         color: #BBD2C5;
-        // -webkit-background-clip: text;
-        // text-shadow:0 1.5rem 2rem rgba($color: #000000, $alpha: .2);
     
     }
     .slogan-Hindi{
@@ -204,28 +206,201 @@ body {
         box-shadow: 0 1.5rem 2.5rem rgba($color: #000000, $alpha: .35);
     }
 }
+.Rank{
+    width: 70%;
+}
 
-.rank-holders{
+.container-rankHolder{
+    position: relative;
 
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
+    .filtter-shadow{
+        
+        filter: drop-shadow(.15rem .8rem 1rem rgba(#000, .2));
+        
+    }
 
-    .rank_holder_box{
+    .rank-holders{
+        
+        width: 38vw;
+        height: 15rem;
+        margin-bottom: 10rem;
+        // clip-path: polygon(10% 0,100% 0,90% 100%, 0 100% );
+        background-image: linear-gradient(to right bottom, #bfacc9,#d3bfdd);
         position: relative;
-        width: 30%;
 
+        &--1{
+            
+            transform: skew(-15deg);
+
+            img{
+                margin-left: 7rem;
+                width: 150px;
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                transform: skew(15deg);
+            }
+
+            .details--1{
+                transform: skew(15deg) translateY(-50%);
+                position: absolute;
+                top: 50%;
+                left: 27rem;
+
+                .name--1{
+                    
+                    font-family: 'Cookie', cursive;
+                    font-size: 3.7rem;
+                    letter-spacing: 2.5px;
+                    color: rgb(0, 102, 165);
+                    font-weight: 500;
+                    text-shadow: 0 .5rem .6rem rgba($color: #000000, $alpha: .3);
+
+                }
+                .belt--1{
+                    font-family: 'Exo 2', sans-serif;
+                    font-size: 1.7rem;
+                    font-weight: 300;
+                }
+
+                .rank--1{
+                    font-family: 'Exo 2', sans-serif;
+                    font-size: 1.7rem;
+                    font-weight: 300;
+                    letter-spacing: 2px;
+                    margin-top: -10px;
+                }
+            }
+            
+        }
+        &--2{
+            left: 40%;
+            transform: skew(-15deg);
+
+            img{
+                margin-right: 10rem;
+                width: 150px;
+                position: absolute;
+                top: 0%;
+                right: 0%;
+                transform: skew(15deg);
+            }
+
+            .details--1{
+                transform: skew(15deg) translateY(-50%);
+                position: absolute;
+                top: 50%;
+                right: 27rem;
+
+                .name--1{
+                    font-family: 'Cookie', cursive;
+                    font-size: 3.7rem;
+                    letter-spacing: 2.5px;
+                    color: rgb(0, 102, 165);
+                    font-weight: 500;
+                    text-shadow: 0 .5rem .6rem rgba($color: #000000, $alpha: .3);
+
+                }
+                .belt--1{
+                    font-family: 'Exo 2', sans-serif;
+                    font-size: 1.7rem;
+                    font-weight: 300;
+                }
+
+                .rank--1{
+                    font-family: 'Exo 2', sans-serif;
+                    font-size: 1.7rem;
+                    font-weight: 300;
+                    letter-spacing: 2px;
+                    margin-top: -10px;
+                }
+            }
+        }
+        &--3{
+            transform: skew(-15deg);
+
+            img{
+                margin-left: 7rem;
+                width: 150px;
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                transform: skew(15deg);
+            }
+
+            .details--1{
+                transform: skew(15deg) translateY(-50%);
+                position: absolute;
+                top: 50%;
+                left: 27rem;
+
+                .name--1{
+
+                    font-family: 'Cookie', cursive;
+                    font-size: 3.7rem;
+                    letter-spacing: 2.5px;
+                    color: rgb(0, 102, 165);
+                    font-weight: 500;
+                    text-shadow: 0 .5rem .6rem rgba($color: #000000, $alpha: .3);
+
+                }
+                .belt--1{
+                    font-family: 'Exo 2', sans-serif;
+                    font-size: 1.7rem;
+                    font-weight: 300;
+                }
+
+                .rank--1{
+                    font-family: 'Exo 2', sans-serif;
+                    font-size: 1.7rem;
+                    font-weight: 300;
+                    letter-spacing: 2px;
+                    margin-top: -10px;
+                }
+            }
+        }
+        &--4{
+            left: 40%;
+            transform: skew(-15deg);
+
+            img{
+                margin-right: 10rem;
+                width: 150px;
+                position: absolute;
+                top: 0%;
+                right: 0%;
+                transform: skew(15deg);
+            }
+
+            .details--1{
+                transform: skew(15deg) translateY(-50%);
+                position: absolute;
+                top: 50%;
+                right: 27rem;
+
+                .name--1{
+                    font-family: 'Cookie', cursive;
+                    font-size: 3.7rem;
+                    letter-spacing: 2.5px;
+                    color: rgb(0, 102, 165);
+                    font-weight: 500;
+                    text-shadow: 0 .5rem .6rem rgba($color: #000000, $alpha: .3);
+
+                }
+                .belt--1{
+                    font-family: 'Exo 2', sans-serif;
+                    font-size: 1.7rem;
+                    font-weight: 300;
+                }
+
+                .rank--1{
+                    font-family: 'Exo 2', sans-serif;
+                    font-size: 1.7rem;
+                    font-weight: 300;
+                    letter-spacing: 2px;
+                    margin-top: -10px;
+                }
+            }
+        }
     }
-
-    img{
-        width: 70px;
-        display: inline-block;
-        margin-right: 10px;
-        float: left;
-    }
-
-    .rank-holder__data{
-        margin-top: 50%;
-    }
-
 }
