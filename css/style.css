@@ -15,7 +15,7 @@
 
 .heading_h2 {
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 3.5rem;
+  font-size: 3.3rem;
   text-transform: uppercase;
   text-align: center;
   background-image: linear-gradient(-20deg, #00c7a9, #313b47);
@@ -23,6 +23,18 @@
   -webkit-background-clip: text;
   background-clip: text;
   text-shadow: 0.3rem 0.7rem 0.8rem rgba(0, 0, 0, 0.4); }
+
+@media only screen and (max-width: 1060px) {
+  .heading_h2 {
+    font-size: 3rem; } }
+
+@media only screen and (min-width: 450px) and (max-width: 780px) {
+  .heading_h2 {
+    font-size: 2.3rem; } }
+
+@media only screen and (max-width: 450px) {
+  .heading_h2 {
+    font-size: 2rem; } }
 
 *,
 *::after,
@@ -32,87 +44,89 @@
   box-sizing: border-box; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  font-family: 'Rubik', Arial, sans-serif; }
 
 body {
   background-color: #E4E6EB; }
 
 .header {
-  background-image: url(/img/headerBG.png);
   height: 100vh;
   background-size: cover;
-  position: relative; }
-  .header__navbar {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 4.5rem 4.5rem;
-    min-width: 100%;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 20px;
-    z-index: 9999; }
-  @media only screen and (max-width: 1430px) {
-    .header .logotext {
-      font-size: 1.3rem; } }
-
-.academy-logo {
-  width: 9rem;
-  transition: all .5s ease-out; }
-  .academy-logo__img {
+  background-image: url(../img/headerBG.png); }
+  .header .navbar-bg {
+    background-image: linear-gradient(to left top, #049882, #404a56);
+    transform: translateY(-2rem);
+    transition: all 0.5s ease-out;
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3); }
+  .header .navbar {
+    z-index: 9999;
+    position: relative;
     width: 100%;
-    cursor: pointer; }
-
-.academy-logo:hover {
-  transform: translateY(-5px) scale(1.1); }
-
-.logotext-click {
-  text-decoration: none; }
-  .logotext-click .logotext {
-    transform: translateX(-15rem);
-    font-family: 'Arial', sans-serif; }
-    .logotext-click .logotext__line1 {
-      display: block;
-      color: rgba(255, 250, 240, 0.891);
-      font-size: 2.3rem; }
-    .logotext-click .logotext__line2 {
+    position: fixed;
+    padding-top: 7rem; }
+    .header .navbar .logo {
+      top: 30%;
+      left: 7rem;
+      height: 8.3rem;
+      position: absolute;
+      transition: all .5s ease-out; }
+      .header .navbar .logo:hover, .header .navbar .logo:focus {
+        transform: translateY(-5px) scale(1.1); }
+    .header .navbar .logo_text {
+      left: 17rem;
+      top: 4.6rem;
+      font-size: 2rem;
+      font-weight: 500;
+      position: absolute;
       display: inline-block;
       color: rgba(255, 250, 240, 0.891);
-      font-size: 2.3rem; }
-  .logotext-click:hover {
-    color: floralwhite;
-    text-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2); }
-  .logotext-click:active {
-    text-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);
-    transform: translateY(0.4px); }
-
-.navlinks__links {
-  list-style: none;
-  color: black; }
-  .navlinks__links li {
-    display: inline-block;
-    font-family: 'Ubuntu', sans-serif; }
-  .navlinks__links li:not(:last-child) {
-    margin-right: .5rem; }
-  .navlinks__links .active {
-    background-image: linear-gradient(-60deg, #1fa48c, #167a64, #0f645a);
+      font-family: 'Rubik', Arial, sans-serif; }
+      .header .navbar .logo_text:hover, .header .navbar .logo_text:focus {
+        color: floralwhite;
+        text-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2); }
+      .header .navbar .logo_text:active {
+        transform: translateY(0.4px);
+        text-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3); }
+    .header .navbar .nav {
+      text-align: right;
+      display: inline-block; }
+      .header .navbar .nav .menu {
+        top: 40%;
+        right: 7rem;
+        position: absolute; }
+        .header .navbar .nav .menu a {
+          line-height: 7rem;
+          font-size: 1.9rem;
+          color: floralwhite;
+          padding: 1rem 1.6rem;
+          text-decoration: none;
+          text-transform: capitalize; }
+          .header .navbar .nav .menu a:hover, .header .navbar .nav .menu a:focus, .header .navbar .nav .menu a::after, .header .navbar .nav .menu a::before {
+            border-radius: 3px;
+            box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
+            background-image: linear-gradient(-60deg, #1fa4bb, #167a8b, #0f6474); }
+          .header .navbar .nav .menu a:active {
+            transform: translateY(2px);
+            background-image: linear-gradient(-60deg, #1fa48c, #167a64, #0f645a);
+            border-radius: 3px;
+            box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4); }
+        .header .navbar .nav .menu a:not(:last-child) {
+          margin-right: 1rem; }
+      .header .navbar .nav label {
+        position: absolute;
+        display: inline-block;
+        font-size: 3.4rem;
+        right: 8rem;
+        top: 4.15rem;
+        color: floralwhite;
+        display: none; }
+      .header .navbar .nav #toggle {
+        display: none; }
+  .header .active {
     border-radius: 3px;
-    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2); }
-  .navlinks__links a {
-    font-size: 1.6rem;
-    color: white;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1rem 2rem; }
-    .navlinks__links a:hover, .navlinks__links a::after, .navlinks__links a::before {
-      background-image: linear-gradient(-60deg, #1fa4bb, #167a8b, #0f6474);
-      border-radius: 3px;
-      box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2); }
-    .navlinks__links a:active {
-      transform: translateY(2px);
-      background-image: linear-gradient(-60deg, #1fa48c, #167a64, #0f645a);
-      border-radius: 3px;
-      box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4); }
+    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(-60deg, #1fa48c, #167a64, #0f645a); }
 
 .welcome_text {
   font-family: 'Roboto', sans-serif;
@@ -167,186 +181,755 @@ body {
 .Rank {
   width: 70%; }
 
-.container-rankHolder {
-  position: relative; }
-  .container-rankHolder .filtter-shadow {
-    filter: drop-shadow(0.15rem 0.8rem 1rem rgba(0, 0, 0, 0.2)); }
-  .container-rankHolder .rank-holders {
-    width: 38vw;
-    height: 15rem;
-    margin-bottom: 10rem;
-    background-image: linear-gradient(to right bottom, #bfacc9, #b89fc4);
-    position: relative; }
-    .container-rankHolder .rank-holders--1 {
-      transform: skew(-15deg); }
-      .container-rankHolder .rank-holders--1 img {
-        margin-left: 7rem;
-        width: 150px;
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        transform: skew(15deg); }
-      .container-rankHolder .rank-holders--1 .details--1 {
-        transform: skew(15deg) translateY(-50%);
-        position: absolute;
-        top: 50%;
-        left: 27rem; }
-        .container-rankHolder .rank-holders--1 .details--1 .name--1 {
-          font-family: 'Cookie', cursive;
-          font-size: 3.7rem;
-          letter-spacing: 2.5px;
-          color: #0066a5;
-          font-weight: 500;
-          text-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3); }
-        .container-rankHolder .rank-holders--1 .details--1 .belt--1 {
-          font-family: 'Exo 2', sans-serif;
-          font-size: 1.7rem;
-          font-weight: 300; }
-        .container-rankHolder .rank-holders--1 .details--1 .rank--1 {
-          font-family: 'Exo 2', sans-serif;
-          font-size: 1.7rem;
-          font-weight: 300;
-          letter-spacing: 2px;
-          margin-top: -10px; }
-    .container-rankHolder .rank-holders--2 {
-      left: 40%;
-      transform: skew(-15deg); }
-      .container-rankHolder .rank-holders--2 img {
-        margin-right: 10rem;
-        width: 150px;
-        position: absolute;
-        top: 0%;
-        right: 0%;
-        transform: skew(15deg); }
-      .container-rankHolder .rank-holders--2 .details--1 {
-        transform: skew(15deg) translateY(-50%);
-        position: absolute;
-        top: 50%;
-        left: 10rem; }
-        .container-rankHolder .rank-holders--2 .details--1 .name--1 {
-          font-family: 'Cookie', cursive;
-          font-size: 3.7rem;
-          letter-spacing: 2.5px;
-          color: #0066a5;
-          font-weight: 500;
-          text-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3); }
-        .container-rankHolder .rank-holders--2 .details--1 .belt--1 {
-          font-family: 'Exo 2', sans-serif;
-          font-size: 1.7rem;
-          font-weight: 300; }
-        .container-rankHolder .rank-holders--2 .details--1 .rank--1 {
-          font-family: 'Exo 2', sans-serif;
-          font-size: 1.7rem;
-          font-weight: 300;
-          letter-spacing: 2px;
-          margin-top: -10px; }
-    .container-rankHolder .rank-holders--3 {
-      transform: skew(-15deg); }
-      .container-rankHolder .rank-holders--3 img {
-        margin-left: 7rem;
-        width: 150px;
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        transform: skew(15deg); }
-      .container-rankHolder .rank-holders--3 .details--1 {
-        transform: skew(15deg) translateY(-50%);
-        position: absolute;
-        top: 50%;
-        left: 27rem; }
-        .container-rankHolder .rank-holders--3 .details--1 .name--1 {
-          font-family: 'Cookie', cursive;
-          font-size: 3.7rem;
-          letter-spacing: 2.5px;
-          color: #0066a5;
-          font-weight: 500;
-          text-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3); }
-        .container-rankHolder .rank-holders--3 .details--1 .belt--1 {
-          font-family: 'Exo 2', sans-serif;
-          font-size: 1.7rem;
-          font-weight: 300; }
-        .container-rankHolder .rank-holders--3 .details--1 .rank--1 {
-          font-family: 'Exo 2', sans-serif;
-          font-size: 1.7rem;
-          font-weight: 300;
-          letter-spacing: 2px;
-          margin-top: -10px; }
-    .container-rankHolder .rank-holders--4 {
-      left: 40%;
-      transform: skew(-15deg); }
-      .container-rankHolder .rank-holders--4 img {
-        margin-right: 10rem;
-        width: 150px;
-        position: absolute;
-        top: 0%;
-        right: 0%;
-        transform: skew(15deg); }
-      .container-rankHolder .rank-holders--4 .details--1 {
-        transform: skew(15deg) translateY(-50%);
-        position: absolute;
-        top: 50%;
-        left: 10rem; }
-        .container-rankHolder .rank-holders--4 .details--1 .name--1 {
-          font-family: 'Cookie', cursive;
-          font-size: 3.7rem;
-          letter-spacing: 2.5px;
-          color: #0066a5;
-          font-weight: 500;
-          text-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3); }
-        .container-rankHolder .rank-holders--4 .details--1 .belt--1 {
-          font-family: 'Exo 2', sans-serif;
-          font-size: 1.7rem;
-          font-weight: 300; }
-        .container-rankHolder .rank-holders--4 .details--1 .rank--1 {
-          font-family: 'Exo 2', sans-serif;
-          font-size: 1.7rem;
-          font-weight: 300;
-          letter-spacing: 2px;
-          margin-top: -10px; }
-
 .reviews {
-  height: 40vh;
-  background-image: linear-gradient(to right bottom, #bfacc942, #b89fc449);
-  margin: 30rem 0 2px 0;
-  position: relative; }
-  .reviews .right-arrow-reviews {
-    position: absolute;
-    top: 50%;
-    right: 6%;
-    transform: translateY(-50%);
-    font-size: 4rem;
+  display: none; }
+
+.reviews-small a {
+  text-decoration: none !important;
+  color: #262644; }
+
+@media only screen and (min-width: 1060px) {
+  .header .navbar-bg {
+    height: 11.5rem !important; }
+  .header .navbar-bg a .logo {
+    top: 23% !important; }
+  .header .navbar-bg .nav .menu {
+    top: 28%; } }
+
+@media only screen and (max-width: 1060px) {
+  .header .navbar .nav .menu a {
+    font-size: 1.75rem; }
+  .header .navbar .nav .menu a:not(:last-child) {
+    margin-right: 0.6rem; }
+  .welcome_text {
+    top: 36%;
+    left: 26%;
+    transform: translate(-26%, 0);
+    font-size: 1.4rem; }
+    .welcome_text .academyName {
+      word-spacing: 0.6rem; }
+  .button-bordered {
+    bottom: 18%;
+    left: 17%; }
+  .explore_more_btn {
+    font-size: 1.2rem; }
+  .header .navbar-bg {
+    height: 11.5rem; }
+  .header .navbar-bg a .logo {
+    top: 23% !important; }
+  .header .navbar-bg .nav .menu {
+    top: 28%; } }
+
+@media only screen and (max-width: 1025px) {
+  .header .navbar a .logo {
+    top: 30%;
+    left: 7rem;
+    height: 7.5rem; }
+  .header .navbar a .logo_text {
+    top: 4.6rem;
+    font-size: 1.75rem;
+    left: 16rem; }
+  .header .navbar-bg {
+    height: 11rem; }
+  .header .navbar-bg a .logo {
+    top: 26% !important; }
+  .header .navbar-bg a .logo_text {
+    top: 4.8rem; }
+  .header .navbar-bg .nav .menu {
+    top: 28%; } }
+
+@media only screen and (max-width: 942px) {
+  .header .navbar a .logo_text {
+    top: 4.35rem;
+    font-size: 1.6rem;
+    left: 26.5%; }
+  .active {
+    border-radius: none !important;
+    box-shadow: none !important;
+    background-image: none !important; }
+  .header .navbar .nav label {
+    display: inline-block;
     cursor: pointer; }
-    .reviews .right-arrow-reviews:hover {
-      transform: scale(1.1) translateY(-50%);
-      text-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); }
-    .reviews .right-arrow-reviews:active {
-      transform: scale(1) translateY(-50%);
-      text-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3); }
-  .reviews .left-arrow-reviews {
-    position: absolute;
-    top: 50%;
+  .header .navbar .nav .menu {
+    right: 0;
+    top: 9rem;
+    width: 100%;
+    display: none;
+    text-align: center; }
+  .header .navbar .nav .menu a {
+    clear: both;
+    display: block;
+    font-size: 1.6rem;
+    margin: 2rem 0 0 0 !important;
+    border-bottom: 1.2px solid rgba(169, 167, 167, 0.3); }
+    .header .navbar .nav .menu a:hover, .header .navbar .nav .menu a:focus {
+      border-radius: none;
+      box-shadow: none;
+      background-image: none;
+      color: #ecd4a3; }
+    .header .navbar .nav .menu a:active {
+      transform: translateY(2px);
+      border-radius: none;
+      box-shadow: none;
+      background-image: none; }
+  .header .navbar .nav #toggle:checked + .menu {
+    display: block; }
+  .button-bordered {
+    bottom: 18%;
+    left: 16%; }
+  .header .navbar-bg {
+    height: 11.2rem; }
+  .header .navbar-bg a .logo_text {
+    top: 4.8rem; } }
+
+@media only screen and (max-width: 550px) {
+  .header .navbar a .logo {
+    top: 30%;
+    left: 10%;
+    height: 7rem !important; }
+  .header .navbar a .logo_text {
+    top: 4.1rem;
+    font-size: 1.5rem;
+    left: 25%; }
+  .header .navbar .nav label {
+    font-size: 3rem !important;
+    right: 10%; }
+  .header .navbar-bg {
+    height: 10.5rem; }
+  .header .navbar-bg a .logo_text {
+    top: 4.5rem !important; } }
+
+@media only screen and (max-width: 530px) {
+  .welcome_text {
+    width: 23rem; } }
+
+@media only screen and (max-width: 480px) {
+  .header .navbar a .logo {
+    top: 32%;
     left: 6%;
-    transform: translateY(-50%);
-    font-size: 4rem;
-    cursor: pointer; }
-    .reviews .left-arrow-reviews:hover {
-      transform: scale(1.1) translateY(-50%);
-      text-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); }
-    .reviews .left-arrow-reviews:active {
-      transform: scale(1) translateY(-50%);
-      text-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3); }
-  .reviews .review {
-    width: 70%;
-    font-family: 'Exo 2', sans-serif;
-    font-size: 2rem;
-    color: #44222d;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+    height: 5.2rem !important; }
+  .header .navbar a .logo_text {
+    top: 3.85rem;
+    font-size: 1.2rem;
+    left: 25%; }
+  .header .navbar .nav label {
+    font-size: 2.6rem !important;
+    right: 10%;
+    top: 3.2rem; }
+  .header .navbar-bg {
+    height: 8.2rem; }
+  .header .navbar-bg a .logo_text {
+    top: 3.8rem !important; }
+  .header .navbar-bg a .logo {
+    top: 30% !important; } }
+
+@media only screen and (min-width: 0) and (max-width: 620px) {
+  .section1 .container {
+    width: 95%; }
+  .section1 .container .all .cl-1 {
+    height: 45vw !important; }
+  .Rank_Holders {
+    margin-top: 0rem !important;
+    margin-bottom: 8rem !important; }
+  .Rank {
+    width: 90%;
+    overflow: hidden;
+    margin-bottom: 5rem !important; }
+  .container-rankHolder {
+    position: relative; }
+    .container-rankHolder .filtter-shadow {
+      filter: drop-shadow(0.15rem 0.8rem 1rem rgba(0, 0, 0, 0.2)); }
+    .container-rankHolder .rank-holders {
+      width: 100%;
+      display: block;
+      height: 27vw;
+      background-image: none;
+      position: relative; }
+      .container-rankHolder .rank-holders--1 {
+        margin-bottom: 13vw; }
+        .container-rankHolder .rank-holders--1 img {
+          width: 25vw;
+          position: absolute;
+          top: 0%;
+          left: 0%; }
+        .container-rankHolder .rank-holders--1 .details--1 {
+          position: absolute;
+          top: 11%;
+          left: 38%; }
+          .container-rankHolder .rank-holders--1 .details--1 .name--1 {
+            font-family: 'Cookie', cursive;
+            font-size: 7vw;
+            letter-spacing: 2.5px;
+            color: #0066a5;
+            font-weight: 500;
+            text-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3); }
+          .container-rankHolder .rank-holders--1 .details--1 .belt--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 4vw;
+            font-weight: 300; }
+          .container-rankHolder .rank-holders--1 .details--1 .rank--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 4vw;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-top: -10px; }
+      .container-rankHolder .rank-holders--2 {
+        margin-bottom: 10vw; }
+        .container-rankHolder .rank-holders--2 img {
+          width: 25vw;
+          position: absolute;
+          top: 0%;
+          left: 0%; }
+        .container-rankHolder .rank-holders--2 .details--1 {
+          position: absolute;
+          top: 11%;
+          left: 38%; }
+          .container-rankHolder .rank-holders--2 .details--1 .name--1 {
+            font-family: 'Cookie', cursive;
+            font-size: 7vw;
+            letter-spacing: 2.5px;
+            color: #0066a5;
+            font-weight: 500;
+            text-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3); }
+          .container-rankHolder .rank-holders--2 .details--1 .belt--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 4vw;
+            font-weight: 300; }
+          .container-rankHolder .rank-holders--2 .details--1 .rank--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 4vw;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-top: -10px; }
+      .container-rankHolder .rank-holders--3 {
+        margin-bottom: 10vw; }
+        .container-rankHolder .rank-holders--3 img {
+          width: 25vw;
+          position: absolute;
+          top: 0%;
+          left: 0%; }
+        .container-rankHolder .rank-holders--3 .details--1 {
+          position: absolute;
+          top: 11%;
+          left: 38%; }
+          .container-rankHolder .rank-holders--3 .details--1 .name--1 {
+            font-family: 'Cookie', cursive;
+            font-size: 7vw;
+            letter-spacing: 2.5px;
+            color: #0066a5;
+            font-weight: 500;
+            text-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3); }
+          .container-rankHolder .rank-holders--3 .details--1 .belt--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 4vw;
+            font-weight: 300; }
+          .container-rankHolder .rank-holders--3 .details--1 .rank--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 4vw;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-top: -10px; }
+      .container-rankHolder .rank-holders--4 {
+        margin-bottom: 10vw; }
+        .container-rankHolder .rank-holders--4 img {
+          width: 25vw;
+          position: absolute;
+          top: 0%;
+          left: 0%; }
+        .container-rankHolder .rank-holders--4 .details--1 {
+          position: absolute;
+          top: 11%;
+          left: 38%; }
+          .container-rankHolder .rank-holders--4 .details--1 .name--1 {
+            font-family: 'Cookie', cursive;
+            font-size: 7vw;
+            letter-spacing: 2.5px;
+            color: #0066a5;
+            font-weight: 500;
+            text-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3); }
+          .container-rankHolder .rank-holders--4 .details--1 .belt--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 4vw;
+            font-weight: 300; }
+          .container-rankHolder .rank-holders--4 .details--1 .rank--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 4vw;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-top: -10px; }
+  .reviews-small {
+    background-image: linear-gradient(to right bottom, #bfacc942, #b89fc449);
+    padding: 10vw 0;
+    margin-bottom: 0 !important; }
+    .reviews-small p {
+      font-size: 3vw;
+      letter-spacing: 0.8px;
+      word-spacing: 1.2px;
+      text-align: justify;
+      text-justify: inter-word;
+      line-height: 1.8; } }
+
+@media only screen and (min-width: 620px) and (max-width: 980px) {
+  .Rank {
+    width: 80%; }
+    .Rank .margin-bottom-15 {
+      margin-bottom: 12vw !important; }
+    .Rank .margin-top-30 {
+      margin-top: 11vw !important; }
+  .container-rankHolder {
+    position: relative; }
+    .container-rankHolder .filtter-shadow {
+      filter: drop-shadow(0.15rem 0.8rem 1rem rgba(0, 0, 0, 0.2)); }
+    .container-rankHolder .rank-holders {
+      width: 100%;
+      height: 12rem;
+      margin-bottom: 10rem;
+      background-image: linear-gradient(to right bottom, #bfacc9, #b89fc4);
+      position: relative; }
+      .container-rankHolder .rank-holders--1 {
+        transform: skew(-15deg); }
+        .container-rankHolder .rank-holders--1 img {
+          margin-left: 10%;
+          width: 130px;
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          transform: skew(15deg); }
+        .container-rankHolder .rank-holders--1 .details--1 {
+          transform: skew(15deg) translateY(-50%);
+          position: absolute;
+          top: 50%;
+          left: 44%; }
+          .container-rankHolder .rank-holders--1 .details--1 .name--1 {
+            font-family: 'Cookie', cursive;
+            font-size: 2.7rem;
+            letter-spacing: 2.5px;
+            color: #0066a5;
+            font-weight: 500;
+            text-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3); }
+          .container-rankHolder .rank-holders--1 .details--1 .belt--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 300; }
+          .container-rankHolder .rank-holders--1 .details--1 .rank--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-top: -10px; }
+      .container-rankHolder .rank-holders--2 {
+        transform: skew(-15deg); }
+        .container-rankHolder .rank-holders--2 img {
+          margin-left: 10%;
+          width: 130px;
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          transform: skew(15deg); }
+        .container-rankHolder .rank-holders--2 .details--1 {
+          transform: skew(15deg) translateY(-50%);
+          position: absolute;
+          top: 50%;
+          left: 44%; }
+          .container-rankHolder .rank-holders--2 .details--1 .name--1 {
+            font-family: 'Cookie', cursive;
+            font-size: 2.7rem;
+            letter-spacing: 2.5px;
+            color: #0066a5;
+            font-weight: 500;
+            text-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3); }
+          .container-rankHolder .rank-holders--2 .details--1 .belt--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 300; }
+          .container-rankHolder .rank-holders--2 .details--1 .rank--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-top: -10px; }
+      .container-rankHolder .rank-holders--3 {
+        transform: skew(-15deg); }
+        .container-rankHolder .rank-holders--3 img {
+          margin-left: 10%;
+          width: 130px;
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          transform: skew(15deg); }
+        .container-rankHolder .rank-holders--3 .details--1 {
+          transform: skew(15deg) translateY(-50%);
+          position: absolute;
+          top: 50%;
+          left: 44%; }
+          .container-rankHolder .rank-holders--3 .details--1 .name--1 {
+            font-family: 'Cookie', cursive;
+            font-size: 2.7rem;
+            letter-spacing: 2.5px;
+            color: #0066a5;
+            font-weight: 500;
+            text-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3); }
+          .container-rankHolder .rank-holders--3 .details--1 .belt--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 300; }
+          .container-rankHolder .rank-holders--3 .details--1 .rank--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-top: -10px; }
+      .container-rankHolder .rank-holders--4 {
+        transform: skew(-15deg); }
+        .container-rankHolder .rank-holders--4 img {
+          margin-left: 10%;
+          width: 130px;
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          transform: skew(15deg); }
+        .container-rankHolder .rank-holders--4 .details--1 {
+          transform: skew(15deg) translateY(-50%);
+          position: absolute;
+          top: 50%;
+          left: 44%; }
+          .container-rankHolder .rank-holders--4 .details--1 .name--1 {
+            font-family: 'Cookie', cursive;
+            font-size: 2.7rem;
+            letter-spacing: 2.5px;
+            color: #0066a5;
+            font-weight: 500;
+            text-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3); }
+          .container-rankHolder .rank-holders--4 .details--1 .belt--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 300; }
+          .container-rankHolder .rank-holders--4 .details--1 .rank--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-top: -10px; }
+  .reviews-small {
+    background-image: linear-gradient(to right bottom, #bfacc942, #b89fc449);
+    padding: 6vw 0;
+    margin-bottom: 0 !important; }
+    .reviews-small p {
+      font-size: 1.5vw;
+      letter-spacing: 0.8px;
+      word-spacing: 1.2px;
+      text-align: justify;
+      text-justify: inter-word;
+      line-height: 1.5; } }
+
+@media only screen and (min-width: 800px) {
+  .section1 .container .all .cl-1 {
+    height: 25vw !important; } }
+
+@media only screen and (min-width: 980px) and (max-width: 1360px) {
+  .container-rankHolder {
+    position: relative; }
+    .container-rankHolder .filtter-shadow {
+      filter: drop-shadow(0.15rem 0.8rem 1rem rgba(0, 0, 0, 0.2)); }
+    .container-rankHolder .rank-holders {
+      width: 38vw;
+      height: 10.5vw;
+      margin-bottom: 6vw;
+      background-image: linear-gradient(to right bottom, #bfacc9, #b89fc4);
+      position: relative; }
+      .container-rankHolder .rank-holders--1 {
+        transform: skew(-15deg); }
+        .container-rankHolder .rank-holders--1 img {
+          margin-left: 4vw;
+          width: 10vw;
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          transform: skew(15deg); }
+        .container-rankHolder .rank-holders--1 .details--1 {
+          transform: skew(15deg) translateY(-50%);
+          position: absolute;
+          top: 50%;
+          left: 50%; }
+          .container-rankHolder .rank-holders--1 .details--1 .name--1 {
+            font-family: 'Cookie', cursive;
+            font-size: 2.2vw;
+            letter-spacing: 2.5px;
+            color: #0066a5;
+            font-weight: 500;
+            text-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3); }
+          .container-rankHolder .rank-holders--1 .details--1 .belt--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1vw;
+            font-weight: 300; }
+          .container-rankHolder .rank-holders--1 .details--1 .rank--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1vw;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-top: -10px; }
+      .container-rankHolder .rank-holders--2 {
+        left: 40%;
+        transform: skew(-15deg); }
+        .container-rankHolder .rank-holders--2 img {
+          margin-right: 4vw;
+          width: 10vw;
+          position: absolute;
+          top: 0%;
+          right: 0%;
+          transform: skew(15deg); }
+        .container-rankHolder .rank-holders--2 .details--1 {
+          transform: skew(15deg) translateY(-50%);
+          position: absolute;
+          top: 50%;
+          left: 22%; }
+          .container-rankHolder .rank-holders--2 .details--1 .name--1 {
+            font-family: 'Cookie', cursive;
+            font-size: 2.2vw;
+            letter-spacing: 2.5px;
+            color: #0066a5;
+            font-weight: 500;
+            text-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3); }
+          .container-rankHolder .rank-holders--2 .details--1 .belt--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1vw;
+            font-weight: 300; }
+          .container-rankHolder .rank-holders--2 .details--1 .rank--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1vw;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-top: -10px; }
+      .container-rankHolder .rank-holders--3 {
+        transform: skew(-15deg); }
+        .container-rankHolder .rank-holders--3 img {
+          margin-left: 4vw;
+          width: 10vw;
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          transform: skew(15deg); }
+        .container-rankHolder .rank-holders--3 .details--1 {
+          transform: skew(15deg) translateY(-50%);
+          position: absolute;
+          top: 50%;
+          left: 50%; }
+          .container-rankHolder .rank-holders--3 .details--1 .name--1 {
+            font-family: 'Cookie', cursive;
+            font-size: 2.2vw;
+            letter-spacing: 2.5px;
+            color: #0066a5;
+            font-weight: 500;
+            text-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3); }
+          .container-rankHolder .rank-holders--3 .details--1 .belt--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1vw;
+            font-weight: 300; }
+          .container-rankHolder .rank-holders--3 .details--1 .rank--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1vw;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-top: -10px; }
+      .container-rankHolder .rank-holders--4 {
+        left: 40%;
+        transform: skew(-15deg); }
+        .container-rankHolder .rank-holders--4 img {
+          margin-right: 4vw;
+          width: 10vw;
+          position: absolute;
+          top: 0%;
+          right: 0%;
+          transform: skew(15deg); }
+        .container-rankHolder .rank-holders--4 .details--1 {
+          transform: skew(15deg) translateY(-50%);
+          position: absolute;
+          top: 50%;
+          left: 22%; }
+          .container-rankHolder .rank-holders--4 .details--1 .name--1 {
+            font-family: 'Cookie', cursive;
+            font-size: 2.2vw;
+            letter-spacing: 2.5px;
+            color: #0066a5;
+            font-weight: 500;
+            text-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3); }
+          .container-rankHolder .rank-holders--4 .details--1 .belt--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1vw;
+            font-weight: 300; }
+          .container-rankHolder .rank-holders--4 .details--1 .rank--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1vw;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-top: -10px; }
+  .reviews-small {
+    background-image: linear-gradient(to right bottom, #bfacc942, #b89fc449);
+    padding: 4vw 0;
+    margin-bottom: 0 !important; }
+    .reviews-small p {
+      font-size: 1.3vw;
+      letter-spacing: 0.8px;
+      word-spacing: 1.2px;
+      text-align: justify;
+      text-justify: inter-word;
+      line-height: 1.5; } }
+
+@media only screen and (min-width: 1200px) {
+  .section1 .container .all .cl-1 {
+    height: 15vw !important; } }
+
+@media only screen and (min-width: 1360px) {
+  .container-rankHolder {
+    position: relative; }
+    .container-rankHolder .filtter-shadow {
+      filter: drop-shadow(0.15rem 0.8rem 1rem rgba(0, 0, 0, 0.2)); }
+    .container-rankHolder .rank-holders {
+      width: 38vw;
+      height: 15rem;
+      margin-bottom: 10rem;
+      background-image: linear-gradient(to right bottom, #bfacc9, #b89fc4);
+      position: relative; }
+      .container-rankHolder .rank-holders--1 {
+        transform: skew(-15deg); }
+        .container-rankHolder .rank-holders--1 img {
+          margin-left: 7rem;
+          width: 150px;
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          transform: skew(15deg); }
+        .container-rankHolder .rank-holders--1 .details--1 {
+          transform: skew(15deg) translateY(-50%);
+          position: absolute;
+          top: 50%;
+          left: 27rem; }
+          .container-rankHolder .rank-holders--1 .details--1 .name--1 {
+            font-family: 'Cookie', cursive;
+            font-size: 2.7rem;
+            letter-spacing: 2.5px;
+            color: #0066a5;
+            font-weight: 500;
+            text-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3); }
+          .container-rankHolder .rank-holders--1 .details--1 .belt--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 300; }
+          .container-rankHolder .rank-holders--1 .details--1 .rank--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-top: -10px; }
+      .container-rankHolder .rank-holders--2 {
+        left: 40%;
+        transform: skew(-15deg); }
+        .container-rankHolder .rank-holders--2 img {
+          margin-right: 10rem;
+          width: 150px;
+          position: absolute;
+          top: 0%;
+          right: 0%;
+          transform: skew(15deg); }
+        .container-rankHolder .rank-holders--2 .details--1 {
+          transform: skew(15deg) translateY(-50%);
+          position: absolute;
+          top: 50%;
+          left: 10rem; }
+          .container-rankHolder .rank-holders--2 .details--1 .name--1 {
+            font-family: 'Cookie', cursive;
+            font-size: 2.7rem;
+            letter-spacing: 2.5px;
+            color: #0066a5;
+            font-weight: 500;
+            text-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3); }
+          .container-rankHolder .rank-holders--2 .details--1 .belt--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 300; }
+          .container-rankHolder .rank-holders--2 .details--1 .rank--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-top: -10px; }
+      .container-rankHolder .rank-holders--3 {
+        transform: skew(-15deg); }
+        .container-rankHolder .rank-holders--3 img {
+          margin-left: 7rem;
+          width: 150px;
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          transform: skew(15deg); }
+        .container-rankHolder .rank-holders--3 .details--1 {
+          transform: skew(15deg) translateY(-50%);
+          position: absolute;
+          top: 50%;
+          left: 27rem; }
+          .container-rankHolder .rank-holders--3 .details--1 .name--1 {
+            font-family: 'Cookie', cursive;
+            font-size: 2.7rem;
+            letter-spacing: 2.5px;
+            color: #0066a5;
+            font-weight: 500;
+            text-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3); }
+          .container-rankHolder .rank-holders--3 .details--1 .belt--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 300; }
+          .container-rankHolder .rank-holders--3 .details--1 .rank--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-top: -10px; }
+      .container-rankHolder .rank-holders--4 {
+        left: 40%;
+        transform: skew(-15deg); }
+        .container-rankHolder .rank-holders--4 img {
+          margin-right: 10rem;
+          width: 150px;
+          position: absolute;
+          top: 0%;
+          right: 0%;
+          transform: skew(15deg); }
+        .container-rankHolder .rank-holders--4 .details--1 {
+          transform: skew(15deg) translateY(-50%);
+          position: absolute;
+          top: 50%;
+          left: 10rem; }
+          .container-rankHolder .rank-holders--4 .details--1 .name--1 {
+            font-family: 'Cookie', cursive;
+            font-size: 2.7rem;
+            letter-spacing: 2.5px;
+            color: #0066a5;
+            font-weight: 500;
+            text-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3); }
+          .container-rankHolder .rank-holders--4 .details--1 .belt--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 300; }
+          .container-rankHolder .rank-holders--4 .details--1 .rank--1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-top: -10px; }
+  .reviews-small {
+    background-image: linear-gradient(to right bottom, #bfacc942, #b89fc449);
+    padding: 4vw 0;
+    margin-bottom: 0 !important; }
+    .reviews-small p {
+      font-size: 1.2vw;
+      letter-spacing: 0.8px;
+      word-spacing: 1.2px;
+      text-align: justify;
+      text-justify: inter-word;
+      line-height: 1.5; } }
 
 .section1 {
-  margin: 15rem 0 30rem 0; }
+  margin: 22vw 0 26vw 0; }
 
 .section-main {
   background-color: #b5d2dd; }
@@ -374,3 +957,33 @@ body {
 
 .margin-bottom-15 {
   margin-bottom: 15rem; }
+
+@media only screen and (min-width: 0) and (max-width: 620px) {
+  .margin-top-25 {
+    margin-top: 0; }
+  .margin-bottom-10 {
+    margin-bottom: -7rem; }
+  .margin-top-30 {
+    margin-top: 1.5rem; }
+  .margin-bottom-15 {
+    margin-bottom: -7rem; } }
+
+@media only screen and (min-width: 620px) and (max-width: 780px) {
+  .margin-top-25 {
+    margin-top: 12vw; }
+  .margin-top-30 {
+    margin-top: 30vw; }
+  .margin-bottom-10 {
+    margin-bottom: 10vw; }
+  .margin-bottom-15 {
+    margin-bottom: 8vw; } }
+
+@media only screen and (min-width: 780px) {
+  .margin-top-25 {
+    margin-top: 4vw; }
+  .margin-top-30 {
+    margin-top: 25vw; }
+  .margin-bottom-10 {
+    margin-bottom: 8vw; }
+  .margin-bottom-15 {
+    margin-bottom: 6vw; } }

@@ -82,6 +82,27 @@
     height: 30rem;
     min-height: 1px;
 }
+.reviews-small .slick-slide
+{
+    display: none;
+    float: left;
+
+    height: auto;
+    min-height: 1px;
+}
+.reviews-small .slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 80% !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.reviews-small .slick-slide{
+    width: 100% !important;
+}
 [dir='rtl'] .slick-slide
 {
     float: right;

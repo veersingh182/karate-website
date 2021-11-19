@@ -8,138 +8,127 @@
 
 html{
     font-size: 62.5%;
+    font-family: 'Rubik', Arial, sans-serif;
 }
 
 body {
     background-color: #E4E6EB;
 }
 
-.header{
 
-    background-image: url(/img/headerBG.png);
+.header{
+    
     height: 100vh;
     background-size: cover;
-    position: relative;
-    
-    
-    &__navbar{
-        display: inline-flex;
-        align-items: center;
-        justify-content: space-around;
-        padding: 4.5rem 4.5rem;
-        min-width: 100%;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 20px;
+    background-image: url(../img/headerBG.png);
+
+    .navbar-bg{
+        background-image: linear-gradient(to left top , #049882, #404a56);
+        transform: translateY(-2rem);
+        transition: all 0.5s ease-out;
+        box-shadow: 0 1rem 1.5rem rgba($color: #000000, $alpha: .3);
+    }
+
+    .navbar {
         z-index: 9999;
-    }
-
-    @media only screen and (max-width: 1430px) {
-        .logotext{
-            font-size: 1.3rem;
-        }
-    }
-    
-}
-
-.academy-logo{
-
-    width: 9rem;
-
-    &__img{
+        position: relative;
         width: 100%;
-        cursor: pointer;
-    }
-    transition: all .5s ease-out;
-}
+        position: fixed;
+        padding-top: 7rem;
 
-.academy-logo:hover{
-    transform: translateY(-5px) scale(1.1);
-}
-
-.logotext-click{
-    text-decoration: none;
-
-    .logotext{
-
-        transform: translateX(-15rem);
-        font-family: 'Arial', sans-serif;     
-    
-        &__line1{
-            display: block;
-            color: rgba(255, 250, 240, 0.891);
-            font-size: 2.3rem;
-        }
-    
-        &__line2{
-            display: inline-block;
-            color: rgba(255, 250, 240, 0.891);
-            font-size: 2.3rem;
-        }
-    }
-    &:hover{
-        color: floralwhite;
-        text-shadow: 0 1rem 1.5rem rgba($color: #000000, $alpha: .2);
-    }
-
-    &:active{
-        text-shadow: 0 1rem 1.5rem rgba($color: #000000, $alpha: .3);
-        transform: translateY(.4px);
-    }
-}
-
-
-
-.navlinks{
-
-    &__links{
-
-        list-style: none;
-        color: black;
-
-        li{
+        .logo{
+            top: 30%;
+            left: 7rem;
+            height: 8.3rem;
+            position: absolute;
+            transition: all .5s ease-out;
             
+            &:hover, &:focus{
+                transform: translateY(-5px) scale(1.1);
+            }
+        }
+
+        .logo_text {
+            left: 17rem;
+            top: 4.6rem;
+            font-size: 2rem;
+            font-weight: 500;
+            position: absolute;
             display: inline-block;
-            font-family: 'Ubuntu', sans-serif;
-
-        }
-
-        li:not(:last-child){
-            margin-right: .5rem;
-        }
-
-        .active{
-            background-image: linear-gradient(-60deg,rgb(31, 164, 140) ,rgb(22, 122, 100), rgb(15, 100, 90));
-            border-radius: 3px;
-            box-shadow: 0 1.5rem 2rem rgba($color: #000000, $alpha: .2);
-        }
-
-        a{
-            font-size: 1.6rem;
-            color: white;
-            text-transform: uppercase;
-            text-decoration: none;
-            padding: 1rem 2rem;
-
-            &:hover, &::after, &::before{
+            color: rgba(255, 250, 240, 0.891);
+            font-family: 'Rubik', Arial, sans-serif;
+        
+            &:hover, &:focus{
+                color: floralwhite;
+                text-shadow: 0 1rem 1.5rem rgba($color: #000000, $alpha: .2);
                 
-                background-image: linear-gradient(-60deg,rgb(31, 164, 187) ,rgb(22, 122, 139), rgb(15, 100, 116));
-                border-radius: 3px;
-                box-shadow: 0 1.5rem 2rem rgba($color: #000000, $alpha: .2);
-
             }
 
             &:active{
-                transform: translateY(2px);
-                background-image: linear-gradient(-60deg,rgb(31, 164, 140) ,rgb(22, 122, 100), rgb(15, 100, 90));
-                border-radius: 3px;
-                box-shadow: 0 1.5rem 2rem rgba($color: #000000, $alpha: .4);
+                transform: translateY(.4px);
+                text-shadow: 0 1rem 1.5rem rgba($color: #000000, $alpha: .3);
             }
         }
 
-            
+        .nav{
+            text-align: right;
+            display: inline-block;
+
+            .menu{
+                top: 40%;
+                right: 7rem;
+                position: absolute;
+
+                a{
+                    line-height: 7rem;
+                    font-size: 1.9rem;
+                    color: floralwhite;
+                    padding: 1rem 1.6rem;
+                    text-decoration: none;
+                    text-transform: capitalize;
+
+                    &:hover, &:focus, &::after, &::before{
+                        border-radius: 3px;
+                        box-shadow: 0 1.5rem 2rem rgba($color: #000000, $alpha: .2);
+                        background-image: linear-gradient(-60deg,rgb(31, 164, 187) ,rgb(22, 122, 139), rgb(15, 100, 116));
+        
+                    }
+                    &:active{
+                        transform: translateY(2px);
+                        background-image: linear-gradient(-60deg,rgb(31, 164, 140) ,rgb(22, 122, 100), rgb(15, 100, 90));
+                        border-radius: 3px;
+                        box-shadow: 0 1.5rem 2rem rgba($color: #000000, $alpha: .4);
+                    }
+                }
+
+                a:not(:last-child){
+                    margin-right: 1rem;
+                }
+                
+            }
+
+            label{
+                position: absolute;
+                display: inline-block;
+                font-size: 3.4rem;
+                right: 8rem;
+                top: 4.15rem;
+                color: floralwhite;
+                display: none;
+            }
+
+            #toggle{
+                display: none;
+            }
+        } 
     }
 
+    .active{
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 2rem rgba($color: #000000, $alpha: .2);
+        background-image: linear-gradient(-60deg,rgb(31, 164, 140) ,rgb(22, 122, 100), rgb(15, 100, 90));
+    }
+    
 }
 
 .welcome_text{
@@ -206,123 +195,761 @@ body {
         box-shadow: 0 1.5rem 2.5rem rgba($color: #000000, $alpha: .35);
     }
 }
+
 .Rank{
     width: 70%;
 }
+.reviews{
+    display: none;
+}
 
-.container-rankHolder{
-    position: relative;
+.reviews-small a{
+    text-decoration: none !important;
+    color: rgb(38, 38, 68);
+}
 
-    .filtter-shadow{
+//@media Queries
+@media only screen and(min-width:1060px){
+    .header .navbar-bg{
+        height: 11.5rem !important;
+    }
+    .header .navbar-bg a .logo{
+        top: 23% !important;
+    }
+    .header .navbar-bg .nav .menu {
+        top: 28%;
+    }
+}
+@media only screen and (max-width: 1060px){
+    .header .navbar .nav .menu a{
+        font-size: 1.75rem;
+    }
+    .header .navbar .nav .menu a:not(:last-child){
+        margin-right: 0.6rem;
+    }
+    .welcome_text{
+        top: 36%;
+        left: 26%;
+        transform: translate(-26%,0);
+        font-size: 1.4rem;
         
-        filter: drop-shadow(.15rem .8rem 1rem rgba(#000, .2));
-        
+        .academyName{
+            word-spacing: 0.6rem;
+        }
+
+    }
+    .button-bordered{
+        bottom: 18%;
+        left: 17%;
+    }
+    .explore_more_btn{
+        font-size: 1.2rem;
+    }
+    .header .navbar-bg{
+        height: 11.5rem;
+    }
+    .header .navbar-bg a .logo{
+        top: 23% !important;
+    }
+    .header .navbar-bg .nav .menu {
+        top: 28%;
+    }
+}
+@media only screen and (max-width: 1025px){
+    .header .navbar a .logo{
+        top: 30%;
+        left: 7rem;
+        height: 7.5rem;
+    }
+    .header .navbar a .logo_text{
+        top: 4.6rem;
+        font-size: 1.75rem;
+        left: 16rem;
+    }
+    .header .navbar-bg{
+        height: 11rem;
+    }
+    .header .navbar-bg a .logo{
+        top: 26% !important;
+    }
+    .header .navbar-bg a .logo_text{
+        top: 4.8rem;
+    }
+    .header .navbar-bg .nav .menu {
+        top: 28%;
+    }
+}
+@media only screen and (max-width: 942px){
+    .header .navbar a .logo_text{
+        top: 4.35rem;
+        font-size: 1.6rem;
+        left: 26.5%;
+    }
+    .active{
+        border-radius: none !important;
+        box-shadow: none !important;
+        background-image: none !important;
     }
 
-    .rank-holders{
+    .header .navbar .nav label{
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .header .navbar .nav .menu {
+        right: 0;
+        top: 9rem;
+        width: 100%;
+        display: none;
+        text-align: center;
+    }
+
+    .header .navbar .nav .menu a{
+        clear: both;
+        display: block;
+        font-size: 1.6rem;
         
-        width: 38vw;
-        height: 15rem;
-        margin-bottom: 10rem;
-        // clip-path: polygon(10% 0,100% 0,90% 100%, 0 100% );
-        background-image: linear-gradient(to right bottom, #bfacc9,#b89fc4);
+        margin: 2rem 0 0 0 !important;
+        border-bottom:1.2px solid rgba(169, 167, 167, 0.3);
+
+        &:hover, &:focus{
+            border-radius: none;
+            box-shadow: none;
+            background-image: none;
+            color: rgb(236, 212, 163);
+        }
+        &:active{
+            transform: translateY(2px);
+            border-radius: none;
+            box-shadow: none;
+            background-image: none;
+        }
+
+    }
+
+    .header .navbar .nav #toggle:checked + .menu{
+        display: block;
+    }
+
+    .button-bordered{
+        bottom: 18%;
+        left: 16%;
+    }
+    .header .navbar-bg{
+        height: 11.2rem;
+    }
+    .header .navbar-bg a .logo_text{
+        top: 4.8rem;
+    }
+
+}
+@media only screen and (max-width: 550px){
+    .header .navbar a .logo{
+        top: 30%;
+        left: 10%;
+        height: 7rem !important;
+    }
+    .header .navbar a .logo_text{
+        top: 4.1rem;
+        font-size: 1.5rem;
+        left: 25%;
+    }
+    .header .navbar .nav label{
+        font-size: 3rem !important;
+        right: 10%;
+    }
+    .header .navbar-bg{
+        height: 10.5rem;
+    }
+    .header .navbar-bg a .logo_text{
+        top: 4.5rem !important;
+    }
+}
+@media only screen and (max-width: 530px){
+    .welcome_text{
+        width: 23rem;
+    }
+}
+@media only screen and (max-width: 480px){
+    .header .navbar a .logo{
+        top: 32%;
+        left: 6%;
+        height: 5.2rem !important;
+    }
+    .header .navbar a .logo_text{
+        top: 3.85rem;
+        font-size: 1.2rem;
+        left: 25%;
+    }
+    .header .navbar .nav label{
+        font-size: 2.6rem !important;
+        right: 10%;
+        top: 3.2rem;
+    }
+    .header .navbar-bg{
+        height: 8.2rem;
+    }
+    .header .navbar-bg a .logo_text{
+        top: 3.8rem !important;
+    }
+    .header .navbar-bg a .logo{
+        top: 30% !important;
+    }
+}
+@media only screen and (min-width:0)and (max-width:620px){
+    .section1 .container{
+        width: 95%;
+    }
+    .section1 .container .all .cl-1{
+        height: 45vw !important; 
+    }
+    
+    .Rank_Holders{
+        margin-top: 0rem !important;
+        margin-bottom: 8rem !important;
+    }
+    .Rank{
+        width: 90%;
+        overflow: hidden;
+        margin-bottom: 5rem !important;
+    }
+    .container-rankHolder{
         position: relative;
-
-        &--1{
-            
-            transform: skew(-15deg);
-
-            img{
-                margin-left: 7rem;
-                width: 150px;
-                position: absolute;
-                top: 0%;
-                left: 0%;
-                transform: skew(15deg);
-            }
-
-            .details--1{
-                transform: skew(15deg) translateY(-50%);
-                position: absolute;
-                top: 50%;
-                left: 27rem;
-
-                .name--1{
-
-                    font-family: 'Cookie', cursive;
-                    font-size: 3.7rem;
-                    letter-spacing: 2.5px;
-                    color: rgb(0, 102, 165);
-                    font-weight: 500;
-                    text-shadow: 0 .5rem .6rem rgba($color: #000000, $alpha: .3);
-
-                }
-                .belt--1{
-                    font-family: 'Exo 2', sans-serif;
-                    font-size: 1.7rem;
-                    font-weight: 300;
-                }
-
-                .rank--1{
-                    font-family: 'Exo 2', sans-serif;
-                    font-size: 1.7rem;
-                    font-weight: 300;
-                    letter-spacing: 2px;
-                    margin-top: -10px;
-                }
-            }
-            
+    
+        .filtter-shadow{
+            filter: drop-shadow(.15rem .8rem 1rem rgba(#000, .2));
         }
-        &--2{
-            left: 40%;
-            transform: skew(-15deg);
 
-            img{
-                margin-right: 10rem;
-                width: 150px;
-                position: absolute;
-                top: 0%;
-                right: 0%;
-                transform: skew(15deg);
-            }
+        .rank-holders{
+            width:100%;
+            display: block;
+            height: 27vw;
+            background-image: none;
+            position: relative;
 
-            .details--1{
-                transform: skew(15deg) translateY(-50%);
-                position: absolute;
-                top: 50%;
-                left: 10rem;
+            &--1{    
+                margin-bottom: 13vw;
+                img{
+                    width: 25vw;
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                }
+    
+                .details--1{
+                    position: absolute;
+                    top: 11%;
+                    left: 38%;
+    
+                    .name--1{
+    
+                        font-family: 'Cookie', cursive;
+                        font-size: 7vw;
+                        letter-spacing: 2.5px;
+                        color: rgb(0, 102, 165);
+                        font-weight: 500;
+                        text-shadow: 0 .5rem .6rem rgba($color: #000000, $alpha: .3);
+    
+                    }
+                    .belt--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 4vw;
+                        font-weight: 300;
+                    }
+    
+                    .rank--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 4vw;
+                        font-weight: 300;
+                        letter-spacing: 2px;
+                        margin-top: -10px;
+                    }
+                }
                 
-
-                .name--1{
-                    font-family: 'Cookie', cursive;
-                    font-size: 3.7rem;
-                    letter-spacing: 2.5px;
-                    color: rgb(0, 102, 165);
-                    font-weight: 500;
-                    text-shadow: 0 .5rem .6rem rgba($color: #000000, $alpha: .3);
-
+            }
+            &--2{    
+                margin-bottom: 10vw;
+                img{
+                    width: 25vw;
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
                 }
-                .belt--1{
-                    font-family: 'Exo 2', sans-serif;
-                    font-size: 1.7rem;
-                    font-weight: 300;
+    
+                .details--1{
+                    position: absolute;
+                    top: 11%;
+                    left: 38%;
+    
+                    .name--1{
+    
+                        font-family: 'Cookie', cursive;
+                        font-size: 7vw;
+                        letter-spacing: 2.5px;
+                        color: rgb(0, 102, 165);
+                        font-weight: 500;
+                        text-shadow: 0 .5rem .6rem rgba($color: #000000, $alpha: .3);
+    
+                    }
+                    .belt--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 4vw;
+                        font-weight: 300;
+                    }
+    
+                    .rank--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 4vw;
+                        font-weight: 300;
+                        letter-spacing: 2px;
+                        margin-top: -10px;
+                    }
                 }
-
-                .rank--1{
-                    font-family: 'Exo 2', sans-serif;
-                    font-size: 1.7rem;
-                    font-weight: 300;
-                    letter-spacing: 2px;
-                    margin-top: -10px;
+                
+            }
+            &--3{
+                margin-bottom: 10vw;
+                img{
+                    width: 25vw;
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
                 }
+    
+                .details--1{
+                    position: absolute;
+                    top: 11%;
+                    left: 38%;
+    
+                    .name--1{
+    
+                        font-family: 'Cookie', cursive;
+                        font-size: 7vw;
+                        letter-spacing: 2.5px;
+                        color: rgb(0, 102, 165);
+                        font-weight: 500;
+                        text-shadow: 0 .5rem .6rem rgba($color: #000000, $alpha: .3);
+    
+                    }
+                    .belt--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 4vw;
+                        font-weight: 300;
+                    }
+    
+                    .rank--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 4vw;
+                        font-weight: 300;
+                        letter-spacing: 2px;
+                        margin-top: -10px;
+                    }
+                }
+                
+            }
+            &--4{
+                margin-bottom: 10vw;
+                img{
+                    width: 25vw;
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                }
+    
+                .details--1{
+                    position: absolute;
+                    top: 11%;
+                    left: 38%;
+    
+                    .name--1{
+    
+                        font-family: 'Cookie', cursive;
+                        font-size: 7vw;
+                        letter-spacing: 2.5px;
+                        color: rgb(0, 102, 165);
+                        font-weight: 500;
+                        text-shadow: 0 .5rem .6rem rgba($color: #000000, $alpha: .3);
+    
+                    }
+                    .belt--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 4vw;
+                        font-weight: 300;
+                    }
+    
+                    .rank--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 4vw;
+                        font-weight: 300;
+                        letter-spacing: 2px;
+                        margin-top: -10px;
+                    }
+                }
+                
             }
         }
-        &--3{
+    }
+    .reviews-small{
+        background-image: linear-gradient(to right bottom, #bfacc942,#b89fc449);
+        padding: 10vw 0;
+        margin-bottom: 0!important;
+        p{
+            font-size: 3vw;
+            letter-spacing: 0.8px;
+            word-spacing: 1.2px;
+            text-align: justify;
+            text-justify: inter-word;
+            line-height: 1.8;
+        }
+    }
+}
+@media only screen and (min-width:620px)and(max-width:980px){
+
+    .Rank{
+      width: 80%;
+
+        .margin-bottom-15{
+            margin-bottom: 12vw !important;
+        }
+        .margin-top-30{
+            margin-top: 11vw !important;
+        }
+    }
+    
+    .container-rankHolder{
+        position: relative;
+    
+        .filtter-shadow{
+            filter: drop-shadow(.15rem .8rem 1rem rgba(#000, .2));
+        }
+    
+        .rank-holders{
+            
+            width: 100%;
+            height: 12rem;
+            margin-bottom: 10rem;
+            background-image: linear-gradient(to right bottom, #bfacc9,#b89fc4);
+            position: relative;
+    
+            &--1{
+                
+                transform: skew(-15deg);
+    
+                img{
+                    margin-left: 10%;
+                    width: 130px;
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    transform: skew(15deg);
+                }
+    
+                .details--1{
+                    transform: skew(15deg) translateY(-50%);
+                    position: absolute;
+                    top: 50%;
+                    left: 44%;
+    
+                    .name--1{
+    
+                        font-family: 'Cookie', cursive;
+                        font-size: 2.7rem;
+                        letter-spacing: 2.5px;
+                        color: rgb(0, 102, 165);
+                        font-weight: 500;
+                        text-shadow: 0 .5rem .6rem rgba($color: #000000, $alpha: .3);
+    
+                    }
+                    .belt--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 1.7rem;
+                        font-weight: 300;
+                    }
+    
+                    .rank--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 1.7rem;
+                        font-weight: 300;
+                        letter-spacing: 2px;
+                        margin-top: -10px;
+                    }
+                }
+                
+            }
+
+            &--2{
+                
+                transform: skew(-15deg);
+    
+                img{
+                    margin-left: 10%;
+                    width: 130px;
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    transform: skew(15deg);
+                }
+    
+                .details--1{
+                    transform: skew(15deg) translateY(-50%);
+                    position: absolute;
+                    top: 50%;
+                    left: 44%;
+    
+                    .name--1{
+    
+                        font-family: 'Cookie', cursive;
+                        font-size: 2.7rem;
+                        letter-spacing: 2.5px;
+                        color: rgb(0, 102, 165);
+                        font-weight: 500;
+                        text-shadow: 0 .5rem .6rem rgba($color: #000000, $alpha: .3);
+    
+                    }
+                    .belt--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 1.7rem;
+                        font-weight: 300;
+                    }
+    
+                    .rank--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 1.7rem;
+                        font-weight: 300;
+                        letter-spacing: 2px;
+                        margin-top: -10px;
+                    }
+                }
+                
+            }
+
+            &--3{
+                
+                transform: skew(-15deg);
+    
+                img{
+                    margin-left: 10%;
+                    width: 130px;
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    transform: skew(15deg);
+                }
+    
+                .details--1{
+                    transform: skew(15deg) translateY(-50%);
+                    position: absolute;
+                    top: 50%;
+                    left: 44%;
+    
+                    .name--1{
+    
+                        font-family: 'Cookie', cursive;
+                        font-size: 2.7rem;
+                        letter-spacing: 2.5px;
+                        color: rgb(0, 102, 165);
+                        font-weight: 500;
+                        text-shadow: 0 .5rem .6rem rgba($color: #000000, $alpha: .3);
+    
+                    }
+                    .belt--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 1.7rem;
+                        font-weight: 300;
+                    }
+    
+                    .rank--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 1.7rem;
+                        font-weight: 300;
+                        letter-spacing: 2px;
+                        margin-top: -10px;
+                    }
+                }
+                
+            }
+            &--4{
+                
+                transform: skew(-15deg);
+    
+                img{
+                    margin-left: 10%;
+                    width: 130px;
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    transform: skew(15deg);
+                }
+    
+                .details--1{
+                    transform: skew(15deg) translateY(-50%);
+                    position: absolute;
+                    top: 50%;
+                    left: 44%;
+    
+                    .name--1{
+    
+                        font-family: 'Cookie', cursive;
+                        font-size: 2.7rem;
+                        letter-spacing: 2.5px;
+                        color: rgb(0, 102, 165);
+                        font-weight: 500;
+                        text-shadow: 0 .5rem .6rem rgba($color: #000000, $alpha: .3);
+    
+                    }
+                    .belt--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 1.7rem;
+                        font-weight: 300;
+                    }
+    
+                    .rank--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 1.7rem;
+                        font-weight: 300;
+                        letter-spacing: 2px;
+                        margin-top: -10px;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .reviews-small{
+        background-image: linear-gradient(to right bottom, #bfacc942,#b89fc449);
+        padding: 6vw 0;
+        margin-bottom: 0!important;
+        p{
+            font-size: 1.5vw;
+            letter-spacing: 0.8px;
+            word-spacing: 1.2px;
+            text-align: justify;
+            text-justify: inter-word;
+            line-height: 1.5;
+        }
+    }
+}
+@media only screen and (min-width: 800px){
+    .section1 .container .all .cl-1{
+        height: 25vw !important; 
+    }
+}
+@media only screen and (min-width:980px)and (max-width:1360px){
+    .container-rankHolder{
+        position: relative;
+    
+        .filtter-shadow{
+            
+            filter: drop-shadow(.15rem .8rem 1rem rgba(#000, .2));
+            
+        }
+    
+        .rank-holders{
+            
+            width: 38vw;
+            height: 10.5vw;
+            margin-bottom: 6vw;
+            background-image: linear-gradient(to right bottom, #bfacc9,#b89fc4);
+            position: relative;
+    
+            &--1{
+                
+                transform: skew(-15deg);
+    
+                img{
+                    margin-left: 4vw;
+                    width: 10vw;
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    transform: skew(15deg);
+                }
+    
+                .details--1{
+                    transform: skew(15deg) translateY(-50%);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+    
+                    .name--1{
+    
+                        font-family: 'Cookie', cursive;
+                        font-size: 2.2vw;
+                        letter-spacing: 2.5px;
+                        color: rgb(0, 102, 165);
+                        font-weight: 500;
+                        text-shadow: 0 .5rem .6rem rgba($color: #000000, $alpha: .3);
+    
+                    }
+                    .belt--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 1vw;
+                        font-weight: 300;
+                    }
+    
+                    .rank--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 1vw;
+                        font-weight: 300;
+                        letter-spacing: 2px;
+                        margin-top: -10px;
+                    }
+                }
+                
+            }
+            &--2{
+                left: 40%;
+                transform: skew(-15deg);
+    
+                img{
+                    margin-right: 4vw;
+                    width: 10vw;
+                    position: absolute;
+                    top: 0%;
+                    right: 0%;
+                    transform: skew(15deg);
+                }
+    
+                .details--1{
+                    transform: skew(15deg) translateY(-50%);
+                    position: absolute;
+                    top: 50%;
+                    left: 22%;
+                    
+    
+                    .name--1{
+                        font-family: 'Cookie', cursive;
+                        font-size: 2.2vw;
+                        letter-spacing: 2.5px;
+                        color: rgb(0, 102, 165);
+                        font-weight: 500;
+                        text-shadow: 0 .5rem .6rem rgba($color: #000000, $alpha: .3);
+    
+                    }
+                    .belt--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 1vw;
+                        font-weight: 300;
+                    }
+    
+                    .rank--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 1vw;
+                        font-weight: 300;
+                        letter-spacing: 2px;
+                        margin-top: -10px;
+                    }
+                }
+           }
+           
+           &--3{
+                
             transform: skew(-15deg);
 
             img{
-                margin-left: 7rem;
-                width: 150px;
+                margin-left: 4vw;
+                width: 10vw;
                 position: absolute;
                 top: 0%;
                 left: 0%;
@@ -333,12 +960,12 @@ body {
                 transform: skew(15deg) translateY(-50%);
                 position: absolute;
                 top: 50%;
-                left: 27rem;
+                left: 50%;
 
                 .name--1{
 
                     font-family: 'Cookie', cursive;
-                    font-size: 3.7rem;
+                    font-size: 2.2vw;
                     letter-spacing: 2.5px;
                     color: rgb(0, 102, 165);
                     font-weight: 500;
@@ -347,26 +974,27 @@ body {
                 }
                 .belt--1{
                     font-family: 'Exo 2', sans-serif;
-                    font-size: 1.7rem;
+                    font-size: 1vw;
                     font-weight: 300;
                 }
 
                 .rank--1{
                     font-family: 'Exo 2', sans-serif;
-                    font-size: 1.7rem;
+                    font-size: 1vw;
                     font-weight: 300;
                     letter-spacing: 2px;
                     margin-top: -10px;
                 }
             }
+            
         }
         &--4{
             left: 40%;
             transform: skew(-15deg);
 
             img{
-                margin-right: 10rem;
-                width: 150px;
+                margin-right: 4vw;
+                width: 10vw;
                 position: absolute;
                 top: 0%;
                 right: 0%;
@@ -377,11 +1005,12 @@ body {
                 transform: skew(15deg) translateY(-50%);
                 position: absolute;
                 top: 50%;
-                left: 10rem;
+                left: 22%;
+                
 
                 .name--1{
                     font-family: 'Cookie', cursive;
-                    font-size: 3.7rem;
+                    font-size: 2.2vw;
                     letter-spacing: 2.5px;
                     color: rgb(0, 102, 165);
                     font-weight: 500;
@@ -390,77 +1019,246 @@ body {
                 }
                 .belt--1{
                     font-family: 'Exo 2', sans-serif;
-                    font-size: 1.7rem;
+                    font-size: 1vw;
                     font-weight: 300;
                 }
 
                 .rank--1{
                     font-family: 'Exo 2', sans-serif;
-                    font-size: 1.7rem;
+                    font-size: 1vw;
                     font-weight: 300;
                     letter-spacing: 2px;
                     margin-top: -10px;
                 }
             }
         }
+        }   
+    }
+    .reviews-small{
+        background-image: linear-gradient(to right bottom, #bfacc942,#b89fc449);
+        padding: 4vw 0;
+        margin-bottom: 0!important;
+        p{
+            font-size: 1.3vw;
+            letter-spacing: 0.8px;
+            word-spacing: 1.2px;
+            text-align: justify;
+            text-justify: inter-word;
+            line-height: 1.5;
+        }
     }
 }
-
-.reviews{
+@media only screen and (min-width: 1200px){
+    .section1 .container .all .cl-1{
+        height: 15vw !important; 
+    }
+} 
+@media only screen and (min-width:1360px){
+    .container-rankHolder{
+        position: relative;
     
-    height: 40vh;
-    background-image: linear-gradient(to right bottom, #bfacc942,#b89fc449);
-    margin: 30rem 0 2px 0;
-    position: relative;
-
-    .right-arrow-reviews{
-        position: absolute;
-        top: 50%;
-        right: 6%;
-        transform: translateY(-50%);
-        font-size: 4rem;
-        cursor: pointer;
-
-        &:hover{
-            transform: scale(1.1) translateY(-50%);
-            text-shadow: 0 1rem 1rem rgba($color: #000000, $alpha: .2);
+        .filtter-shadow{
+            
+            filter: drop-shadow(.15rem .8rem 1rem rgba(#000, .2));
+            
         }
-        &:active{
-            transform: scale(1) translateY(-50%);
-            text-shadow: 0 1rem 1rem rgba($color: #000000, $alpha: .3);
-
+    
+        .rank-holders{
+            
+            width: 38vw;
+            height: 15rem;
+            margin-bottom: 10rem;
+            background-image: linear-gradient(to right bottom, #bfacc9,#b89fc4);
+            position: relative;
+    
+            &--1{
+                
+                transform: skew(-15deg);
+    
+                img{
+                    margin-left: 7rem;
+                    width: 150px;
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    transform: skew(15deg);
+                }
+    
+                .details--1{
+                    transform: skew(15deg) translateY(-50%);
+                    position: absolute;
+                    top: 50%;
+                    left: 27rem;
+    
+                    .name--1{
+    
+                        font-family: 'Cookie', cursive;
+                        font-size: 2.7rem;
+                        letter-spacing: 2.5px;
+                        color: rgb(0, 102, 165);
+                        font-weight: 500;
+                        text-shadow: 0 .5rem .6rem rgba($color: #000000, $alpha: .3);
+    
+                    }
+                    .belt--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 1.7rem;
+                        font-weight: 300;
+                    }
+    
+                    .rank--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 1.7rem;
+                        font-weight: 300;
+                        letter-spacing: 2px;
+                        margin-top: -10px;
+                    }
+                }
+                
+            }
+            &--2{
+                left: 40%;
+                transform: skew(-15deg);
+    
+                img{
+                    margin-right: 10rem;
+                    width: 150px;
+                    position: absolute;
+                    top: 0%;
+                    right: 0%;
+                    transform: skew(15deg);
+                }
+    
+                .details--1{
+                    transform: skew(15deg) translateY(-50%);
+                    position: absolute;
+                    top: 50%;
+                    left: 10rem;
+                    
+    
+                    .name--1{
+                        font-family: 'Cookie', cursive;
+                        font-size: 2.7rem;
+                        letter-spacing: 2.5px;
+                        color: rgb(0, 102, 165);
+                        font-weight: 500;
+                        text-shadow: 0 .5rem .6rem rgba($color: #000000, $alpha: .3);
+    
+                    }
+                    .belt--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 1.7rem;
+                        font-weight: 300;
+                    }
+    
+                    .rank--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 1.7rem;
+                        font-weight: 300;
+                        letter-spacing: 2px;
+                        margin-top: -10px;
+                    }
+                }
+            }
+            &--3{
+                transform: skew(-15deg);
+    
+                img{
+                    margin-left: 7rem;
+                    width: 150px;
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    transform: skew(15deg);
+                }
+    
+                .details--1{
+                    transform: skew(15deg) translateY(-50%);
+                    position: absolute;
+                    top: 50%;
+                    left: 27rem;
+    
+                    .name--1{
+    
+                        font-family: 'Cookie', cursive;
+                        font-size: 2.7rem;
+                        letter-spacing: 2.5px;
+                        color: rgb(0, 102, 165);
+                        font-weight: 500;
+                        text-shadow: 0 .5rem .6rem rgba($color: #000000, $alpha: .3);
+    
+                    }
+                    .belt--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 1.7rem;
+                        font-weight: 300;
+                    }
+    
+                    .rank--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 1.7rem;
+                        font-weight: 300;
+                        letter-spacing: 2px;
+                        margin-top: -10px;
+                    }
+                }
+            }
+            &--4{
+                left: 40%;
+                transform: skew(-15deg);
+    
+                img{
+                    margin-right: 10rem;
+                    width: 150px;
+                    position: absolute;
+                    top: 0%;
+                    right: 0%;
+                    transform: skew(15deg);
+                }
+    
+                .details--1{
+                    transform: skew(15deg) translateY(-50%);
+                    position: absolute;
+                    top: 50%;
+                    left: 10rem;
+    
+                    .name--1{
+                        font-family: 'Cookie', cursive;
+                        font-size: 2.7rem;
+                        letter-spacing: 2.5px;
+                        color: rgb(0, 102, 165);
+                        font-weight: 500;
+                        text-shadow: 0 .5rem .6rem rgba($color: #000000, $alpha: .3);
+    
+                    }
+                    .belt--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 1.7rem;
+                        font-weight: 300;
+                    }
+    
+                    .rank--1{
+                        font-family: 'Exo 2', sans-serif;
+                        font-size: 1.7rem;
+                        font-weight: 300;
+                        letter-spacing: 2px;
+                        margin-top: -10px;
+                    }
+                }
+            }
         }
-
     }
-    .left-arrow-reviews{
-        position: absolute;
-        top: 50%;
-        left: 6%;
-        transform: translateY(-50%);
-        font-size: 4rem;
-        cursor: pointer;
-
-        &:hover{
-            transform: scale(1.1) translateY(-50%);
-            text-shadow: 0 1rem 1rem rgba($color: #000000, $alpha: .2);
+    .reviews-small{
+        background-image: linear-gradient(to right bottom, #bfacc942,#b89fc449);
+        padding: 4vw 0;
+        margin-bottom: 0!important;
+        p{
+            font-size: 1.2vw;
+            letter-spacing: 0.8px;
+            word-spacing: 1.2px;
+            text-align: justify;
+            text-justify: inter-word;
+            line-height: 1.5;
         }
-        &:active{
-            transform: scale(1) translateY(-50%);
-            text-shadow: 0 1rem 1rem rgba($color: #000000, $alpha: .3);
-        }
-    }
-
-
-    .review{
-        width: 70%;
-        font-family: 'Exo 2', sans-serif;
-        font-size: 2rem;
-        color: #44222d;
-
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-
     }
 }

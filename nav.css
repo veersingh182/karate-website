@@ -1,0 +1,146 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Rubik', Arial, sans-serif;
+}
+body{
+    font-size: 2rem;
+}
+.header{
+    height: 100vh;
+    z-index: 9999;
+    background-size: cover;
+    background-image: url(./img/headerBG.png);
+}
+.header .navbar {
+    position: relative;
+    position: fixed;
+    width: 100%;
+    margin-top: 2rem;
+}
+.header .navbar .logo{
+    height: 8.3rem;
+    position: absolute;
+    left: 7rem;
+    top: 30%;
+}
+
+.header .navbar .logo_text {
+    font-size: 2rem;
+    font-weight: 500;
+    display: inline-block;
+    position: absolute;
+    left: 17rem;
+    top: 108%;
+    color: rgba(255, 250, 240, 0.891);
+    font-family: 'Rubik', Arial, sans-serif;
+
+}
+
+.header .navbar .logo_text:hover, :focus{
+    color: floralwhite;
+    text-shadow: 0 1rem 1.5rem rgba(#000000, .2);
+    -webkit-text-shadow :0 1rem 1.5rem rgba(#000000, .2);
+}
+.header .navbar .logo_text:active{
+    text-shadow: 0 1rem 1.5rem rgba(#000000, .3);
+    transform: translateY(.4px);
+}
+.header .navbar .nav{
+    display: inline-block;
+    text-align: right;
+} 
+
+.header .navbar .nav .menu{
+    position: absolute;
+    right: 7rem;
+    top: 30%;
+}
+.header .navbar .nav .menu a{
+    text-decoration: none;
+    color: floralwhite;
+    line-height: 7rem;
+    text-transform: capitalize;
+    font-size: 1.9rem;
+}
+.header .navbar .nav .menu a:not(:last-child){
+    margin-right: 3rem;
+}
+
+.nav label{
+    position: absolute;
+    display: inline-block;
+    font-size: 3.4rem;
+    right: 8rem;
+    top: 2rem;
+    color: floralwhite;
+    display: none;
+}
+.nav #toggle{
+    display: none;
+}
+
+@media only screen and (max-width: 1060px){
+    .header .navbar .nav .menu a{
+        font-size: 1.75rem;
+    }
+    .header .navbar .nav .menu a:not(:last-child){
+        margin-right: 2rem;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .header .navbar a .logo{
+        height: 7.5rem;
+        left: 7rem;
+        top: 30%;
+    }
+    .header .navbar a .logo_text{
+        font-size: 1.75rem;
+        left: 16rem;
+        top: 108%;
+    }
+}
+
+@media only screen and (max-width: 850px){
+    .header .navbar a .logo{
+        height: 7.5rem;
+        left: 7rem;
+        top: 30%;
+    }
+    .header .navbar a .logo_text{
+        font-size: 1.75rem;
+        left: 16rem;
+        top: 108%;
+    }
+
+    .header .navbar .nav label{
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .header .navbar .nav .menu {
+        right: 0;
+        top: 9rem;
+        width: 100%;
+        display: none;
+        text-align: center;
+    }
+
+    .header .navbar .nav .menu a{
+        clear: both;
+        display: block;
+        font-size: 1.6rem;
+        
+        margin: 10px 0 0 0 !important;
+        border-bottom:1.2px solid rgba(169, 167, 167, 0.3);
+
+    }
+    .header .navbar .nav #toggle:checked + .menu{
+        display: block;
+    }
+}
