@@ -1,9 +1,8 @@
-'use strict';
+window.addEventListener('scroll',()=>{
 
+    let navbar = document.querySelector('.navbar');
+    let windowPosition = window.scrollY > 0;
 
+    navbar.classList.toggle('navbar-bg', windowPosition);
 
-const home = document.getElementById('home');
-const aboutUs = document.getElementById('aboutUs');
-const events = document.getElementById('events');
-const articles = document.getElementById('articles');
-const contactUs = document.getElementById('contactUs');
+})
