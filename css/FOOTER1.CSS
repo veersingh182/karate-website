@@ -65,7 +65,7 @@ html{
     font-size: 1.6rem;
     position: absolute;
     top: 47%;
-    left: 50%;
+    left: 52%;
     transform: translateY(-50%);
 }
 .footer .address-academy li{
@@ -260,7 +260,7 @@ html{
 }
 @media only screen and (max-width: 430px){
     .footer{
-        height: 25rem;
+        height: 15rem;
     }
     .footer .logo_footer{
         width: 6.5rem !important;
@@ -270,7 +270,7 @@ html{
     .footer .footer-logo_text{
         font-size: 14px;
         left: 39%;
-        top: 24%;
+        top: 20%;
     }
     .footer .social-links{
         left: 50%;

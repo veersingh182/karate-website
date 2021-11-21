@@ -213,32 +213,89 @@
     {
         margin: 17px -5px;
     }
-    .reviews-small .slick-dots{
-        bottom: 2px;
+    .section-review .slick-dots li
+    {
+        margin: 40px -5px 0 -5px;
     }
-    .reviews-small .slick-dots li button:before
+    .section-review .slick-dots{
+        bottom: -30px;
+    }
+    .section-review .slick-dots li button:before
     {
         font-size: 1.3vw;
     }
     .section1 .slick-arrow{
         display: none !important;
     }
+    .section-review .slick-arrow{
+        display: none !important;
+    }
 }
+
 @media only screen and (min-width:620px) and (max-width:980px){
-    .reviews-small .slick-dots{
+    .section-review .slick-dots{
         bottom: 2px;
     }
-    .reviews-small .slick-dots li button:before
+    .section-review .slick-dots li button:before
     {
         font-size: 6px;
     }
+    .section-review .slick-prev:before,
+    .section-review .slick-next:before
+    {
+        font-family: 'slick';
+        font-size: 3.5rem;
+        line-height: 1;
+    
+        opacity: .75;
+        color: rgb(115, 98, 98);
+    
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    .section-review .slick-prev:hover,
+    .section-review .slick-prev:focus,
+    .section-review .slick-next:hover,
+    .section-review .slick-next:focus
+    {
+        color: transparent;
+        outline: none;
+        background: transparent;
+    }
+    .section-review .slick-prev:hover:before,
+    .section-review .slick-prev:focus:before,
+    .section-review .slick-next:hover:before,
+    .section-review .slick-next:focus:before
+    {
+        opacity: 1;
+    }
+    .section-review .slick-next
+    {
+        right: -40px;
+        top: 40%;
+    }
+    .section-review .slick-prev
+    {
+        left: -55px;
+        top: 40%;
+    }
 }
 @media only screen and (min-width:980px){
-    .reviews-small .slick-dots{
+    .section-review .slick-dots{
         bottom: 2px;
     }
-    .reviews-small .slick-dots li button:before
+    .section-review .slick-dots li button:before
     {
         font-size: 7px;
+    }
+    .section-review .slick-next
+    {
+        right: -40px;
+        top: 40%;
+    }
+    .section-review .slick-prev
+    {
+        left: -55px;
+        top: 40%;
     }
 }

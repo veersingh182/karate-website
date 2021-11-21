@@ -48,7 +48,8 @@ html {
   font-family: 'Rubik', Arial, sans-serif; }
 
 body {
-  background-color: #E4E6EB; }
+  background-color: #E4E6EB;
+  overflow-x: hidden; }
 
 .header {
   height: 100vh;
@@ -59,6 +60,9 @@ body {
     transform: translateY(-2rem);
     transition: all 0.5s ease-out;
     box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3); }
+  .header .bgColor_nav_small {
+    height: 100vh !important;
+    background-image: linear-gradient(to left top, #049882, #404a56); }
   .header .navbar {
     z-index: 9999;
     position: relative;
@@ -181,13 +185,6 @@ body {
 .Rank {
   width: 70%; }
 
-.reviews {
-  display: none; }
-
-.reviews-small a {
-  text-decoration: none !important;
-  color: #262644; }
-
 @media only screen and (min-width: 1060px) {
   .header .navbar-bg {
     height: 11.5rem !important; }
@@ -239,6 +236,10 @@ body {
     top: 28%; } }
 
 @media only screen and (max-width: 942px) {
+  .header .navbar a .logo {
+    top: 2.5rem;
+    left: 7rem;
+    height: 7.5rem; }
   .header .navbar a .logo_text {
     top: 4.35rem;
     font-size: 1.6rem;
@@ -260,7 +261,8 @@ body {
     clear: both;
     display: block;
     font-size: 1.6rem;
-    margin: 2rem 0 0 0 !important;
+    line-height: 5rem;
+    margin: 1.5rem 0 0 0 !important;
     border-bottom: 1.2px solid rgba(169, 167, 167, 0.3); }
     .header .navbar .nav .menu a:hover, .header .navbar .nav .menu a:focus {
       border-radius: none;
@@ -272,19 +274,21 @@ body {
       border-radius: none;
       box-shadow: none;
       background-image: none; }
-  .header .navbar .nav #toggle:checked + .menu {
-    display: block; }
+  .menu_display_block {
+    display: block !important; }
   .button-bordered {
     bottom: 18%;
     left: 16%; }
   .header .navbar-bg {
     height: 11.2rem; }
   .header .navbar-bg a .logo_text {
-    top: 4.8rem; } }
+    top: 4.8rem; }
+  .header .navbar-bg a .logo {
+    top: 2.8rem !important; } }
 
 @media only screen and (max-width: 550px) {
   .header .navbar a .logo {
-    top: 30%;
+    top: 2.7rem;
     left: 10%;
     height: 7rem !important; }
   .header .navbar a .logo_text {
@@ -297,7 +301,9 @@ body {
   .header .navbar-bg {
     height: 10.5rem; }
   .header .navbar-bg a .logo_text {
-    top: 4.5rem !important; } }
+    top: 4.5rem !important; }
+  .header .navbar-bg a .logo {
+    top: 2.8rem !important; } }
 
 @media only screen and (max-width: 530px) {
   .welcome_text {
@@ -305,7 +311,7 @@ body {
 
 @media only screen and (max-width: 480px) {
   .header .navbar a .logo {
-    top: 32%;
+    top: 2.65rem;
     left: 6%;
     height: 5.2rem !important; }
   .header .navbar a .logo_text {
@@ -316,12 +322,16 @@ body {
     font-size: 2.6rem !important;
     right: 10%;
     top: 3.2rem; }
+  .header .navbar .nav .menu a {
+    clear: both;
+    display: block;
+    font-size: 4vw; }
   .header .navbar-bg {
     height: 8.2rem; }
   .header .navbar-bg a .logo_text {
     top: 3.8rem !important; }
   .header .navbar-bg a .logo {
-    top: 30% !important; } }
+    top: 2.65rem !important; } }
 
 @media only screen and (min-width: 0) and (max-width: 620px) {
   .section1 .container {
@@ -456,18 +466,67 @@ body {
             font-size: 4vw;
             font-weight: 300;
             letter-spacing: 2px;
-            margin-top: -10px; }
-  .reviews-small {
+            margin-top: -10px; } }
+
+@media only screen and (min-width: 0) and (max-width: 480px) {
+  .section-review .container .all .cl-1 {
+    height: auto !important; }
+  .section-review .container {
+    margin: 5rem auto 0 auto;
+    width: 100%; }
+  .section-review {
     background-image: linear-gradient(to right bottom, #bfacc942, #b89fc449);
-    padding: 10vw 0;
+    padding: 0.2vw 0;
     margin-bottom: 0 !important; }
-    .reviews-small p {
+    .section-review .cl-1 {
+      margin: 0 0 2rem 0 !important; }
+    .section-review p {
       font-size: 3vw;
-      letter-spacing: 0.8px;
-      word-spacing: 1.2px;
+      letter-spacing: 0.1px;
+      word-spacing: 1px;
       text-align: justify;
       text-justify: inter-word;
-      line-height: 1.8; } }
+      line-height: 1.8;
+      font-family: 'Roboto',Arial, Helvetica, sans-serif !important; }
+      .section-review p span {
+        font-size: 3vw;
+        display: inline-block;
+        margin-top: 3rem; }
+      .section-review p .readMore {
+        margin-left: 40%;
+        cursor: pointer; }
+      .section-review p .readMore:hover, .section-review p .readMore:focus {
+        color: #7b5813; } }
+
+@media only screen and (min-width: 480px) and (max-width: 620px) {
+  .section-review .container .all .cl-1 {
+    height: auto !important; }
+  .section-review .container {
+    margin: 5rem auto 0 auto;
+    width: 87%; }
+  .section-review {
+    background-image: linear-gradient(to right bottom, #bfacc942, #b89fc449);
+    padding: 0.2vw 0;
+    margin-bottom: 0 !important; }
+    .section-review .cl-1 {
+      margin: 0 0 2rem 0 !important; }
+    .section-review p {
+      font-size: 3vw;
+      letter-spacing: 0.1px;
+      word-spacing: 1px;
+      text-align: justify;
+      text-justify: inter-word;
+      line-height: 1.8;
+      font-family: 'Roboto',Arial, Helvetica, sans-serif !important; }
+      .section-review p span {
+        font-size: 3vw;
+        display: inline-block;
+        margin-top: 3rem; }
+      .section-review p .readMore {
+        margin-left: 35%;
+        cursor: pointer; }
+      .section-review p .readMore:hover, .section-review p .readMore:focus {
+        color: #7b5813; } }
 
 @media only screen and (min-width: 620px) and (max-width: 980px) {
   .Rank {
@@ -610,17 +669,34 @@ body {
             font-weight: 300;
             letter-spacing: 2px;
             margin-top: -10px; }
-  .reviews-small {
+  .section-review .container .all .cl-1 {
+    height: auto !important; }
+  .section-review .container {
+    margin: 5rem auto 0 auto;
+    width: 78%; }
+  .section-review {
     background-image: linear-gradient(to right bottom, #bfacc942, #b89fc449);
-    padding: 6vw 0;
+    padding: 0.2vw 0;
     margin-bottom: 0 !important; }
-    .reviews-small p {
-      font-size: 1.5vw;
-      letter-spacing: 0.8px;
-      word-spacing: 1.2px;
+    .section-review .cl-1 {
+      margin: 0 0 2rem 0 !important; }
+    .section-review p {
+      font-size: 2vw;
+      letter-spacing: 0.1px;
+      word-spacing: 1px;
       text-align: justify;
       text-justify: inter-word;
-      line-height: 1.5; } }
+      line-height: 1.8;
+      font-family: 'Roboto',Arial, Helvetica, sans-serif !important; }
+      .section-review p span {
+        font-size: 2vw;
+        display: inline-block;
+        margin-top: 3rem; }
+      .section-review p .readMore {
+        margin-left: 55%;
+        cursor: pointer; }
+      .section-review p .readMore:hover, .section-review p .readMore:focus {
+        color: #7b5813; } }
 
 @media only screen and (min-width: 800px) {
   .section1 .container .all .cl-1 {
@@ -763,17 +839,34 @@ body {
             font-weight: 300;
             letter-spacing: 2px;
             margin-top: -10px; }
-  .reviews-small {
+  .section-review .container .all .cl-1 {
+    height: auto !important; }
+  .section-review .container {
+    margin: 5rem auto 0 auto;
+    width: 78%; }
+  .section-review {
     background-image: linear-gradient(to right bottom, #bfacc942, #b89fc449);
-    padding: 4vw 0;
+    padding: 0.2vw 0;
     margin-bottom: 0 !important; }
-    .reviews-small p {
+    .section-review .cl-1 {
+      margin: 0 0 2rem 0 !important; }
+    .section-review p {
       font-size: 1.3vw;
-      letter-spacing: 0.8px;
-      word-spacing: 1.2px;
+      letter-spacing: 0.1px;
+      word-spacing: 1px;
       text-align: justify;
       text-justify: inter-word;
-      line-height: 1.5; } }
+      line-height: 1.8;
+      font-family: 'Roboto',Arial, Helvetica, sans-serif !important; }
+      .section-review p span {
+        font-size: 1.2vw;
+        display: inline-block;
+        margin-top: 3rem; }
+      .section-review p .readMore {
+        margin-left: 74%;
+        cursor: pointer; }
+      .section-review p .readMore:hover, .section-review p .readMore:focus {
+        color: #7b5813; } }
 
 @media only screen and (min-width: 1200px) {
   .section1 .container .all .cl-1 {
@@ -916,17 +1009,34 @@ body {
             font-weight: 300;
             letter-spacing: 2px;
             margin-top: -10px; }
-  .reviews-small {
+  .section-review .container .all .cl-1 {
+    height: auto !important; }
+  .section-review .container {
+    margin: 5rem auto 0 auto;
+    width: 80%; }
+  .section-review {
     background-image: linear-gradient(to right bottom, #bfacc942, #b89fc449);
-    padding: 4vw 0;
+    padding: 0.2vw 0;
     margin-bottom: 0 !important; }
-    .reviews-small p {
+    .section-review .cl-1 {
+      margin: 0 0 2rem 0 !important; }
+    .section-review p {
       font-size: 1.2vw;
-      letter-spacing: 0.8px;
-      word-spacing: 1.2px;
+      letter-spacing: 0.1px;
+      word-spacing: 1px;
       text-align: justify;
       text-justify: inter-word;
-      line-height: 1.5; } }
+      line-height: 1.8;
+      font-family: 'Roboto',Arial, Helvetica, sans-serif !important; }
+      .section-review p span {
+        font-size: 1.1vw;
+        display: inline-block;
+        margin-top: 3rem; }
+      .section-review p .readMore {
+        margin-left: 78%;
+        cursor: pointer; }
+      .section-review p .readMore:hover, .section-review p .readMore:focus {
+        color: #7b5813; } }
 
 .section1 {
   margin: 22vw 0 26vw 0; }

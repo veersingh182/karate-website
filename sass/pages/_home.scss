@@ -13,6 +13,7 @@ html{
 
 body {
     background-color: #E4E6EB;
+    overflow-x: hidden;
 }
 
 
@@ -28,7 +29,10 @@ body {
         transition: all 0.5s ease-out;
         box-shadow: 0 1rem 1.5rem rgba($color: #000000, $alpha: .3);
     }
-
+    .bgColor_nav_small{
+        height: 100vh !important;
+        background-image: linear-gradient(to left top , #049882, #404a56);
+    }
     .navbar {
         z-index: 9999;
         position: relative;
@@ -120,7 +124,7 @@ body {
             #toggle{
                 display: none;
             }
-        } 
+        }
     }
 
     .active{
@@ -199,14 +203,6 @@ body {
 .Rank{
     width: 70%;
 }
-.reviews{
-    display: none;
-}
-
-.reviews-small a{
-    text-decoration: none !important;
-    color: rgb(38, 38, 68);
-}
 
 //@media Queries
 @media only screen and(min-width:1060px){
@@ -280,6 +276,11 @@ body {
     }
 }
 @media only screen and (max-width: 942px){
+    .header .navbar a .logo{
+        top: 2.5rem;
+        left: 7rem;
+        height: 7.5rem;
+    }
     .header .navbar a .logo_text{
         top: 4.35rem;
         font-size: 1.6rem;
@@ -308,8 +309,9 @@ body {
         clear: both;
         display: block;
         font-size: 1.6rem;
+        line-height: 5rem;
         
-        margin: 2rem 0 0 0 !important;
+        margin: 1.5rem 0 0 0 !important;
         border-bottom:1.2px solid rgba(169, 167, 167, 0.3);
 
         &:hover, &:focus{
@@ -326,10 +328,13 @@ body {
         }
 
     }
-
-    .header .navbar .nav #toggle:checked + .menu{
-        display: block;
+    .menu_display_block{
+        display: block !important;
     }
+
+    // .header .navbar .nav #toggle:checked + .menu{
+    //     display: block;
+    // }
 
     .button-bordered{
         bottom: 18%;
@@ -341,11 +346,14 @@ body {
     .header .navbar-bg a .logo_text{
         top: 4.8rem;
     }
+    .header .navbar-bg a .logo{
+        top: 2.8rem !important;
+    }
 
 }
 @media only screen and (max-width: 550px){
     .header .navbar a .logo{
-        top: 30%;
+        top: 2.7rem;
         left: 10%;
         height: 7rem !important;
     }
@@ -364,6 +372,9 @@ body {
     .header .navbar-bg a .logo_text{
         top: 4.5rem !important;
     }
+    .header .navbar-bg a .logo{
+        top: 2.8rem !important;
+    }
 }
 @media only screen and (max-width: 530px){
     .welcome_text{
@@ -372,7 +383,7 @@ body {
 }
 @media only screen and (max-width: 480px){
     .header .navbar a .logo{
-        top: 32%;
+        top: 2.65rem;
         left: 6%;
         height: 5.2rem !important;
     }
@@ -386,6 +397,11 @@ body {
         right: 10%;
         top: 3.2rem;
     }
+    .header .navbar .nav .menu a{
+        clear: both;
+        display: block;
+        font-size: 4vw;
+    }
     .header .navbar-bg{
         height: 8.2rem;
     }
@@ -393,8 +409,9 @@ body {
         top: 3.8rem !important;
     }
     .header .navbar-bg a .logo{
-        top: 30% !important;
+        top: 2.65rem !important;
     }
+
 }
 @media only screen and (min-width:0)and (max-width:620px){
     .section1 .container{
@@ -589,17 +606,87 @@ body {
             }
         }
     }
-    .reviews-small{
+    
+}
+@media only screen and (min-width:0)and(max-width:480px){
+    .section-review .container .all .cl-1{
+        height: auto !important; 
+    }
+    .section-review .container {
+        margin: 5rem auto 0 auto;
+        width: 100%;
+    }
+    .section-review{
         background-image: linear-gradient(to right bottom, #bfacc942,#b89fc449);
-        padding: 10vw 0;
+        padding: 0.2vw 0;
         margin-bottom: 0!important;
+
+        .cl-1{
+            margin: 0 0 2rem 0 !important;
+        }
+
         p{
             font-size: 3vw;
-            letter-spacing: 0.8px;
-            word-spacing: 1.2px;
+            letter-spacing: 0.1px;
+            word-spacing: 1px;
             text-align: justify;
             text-justify: inter-word;
             line-height: 1.8;
+            font-family: 'Roboto',Arial, Helvetica, sans-serif !important;
+
+            span{
+                font-size: 3vw;
+                display: inline-block;
+                margin-top: 3rem;
+            }
+            .readMore{
+                margin-left: 40%;
+                cursor: pointer;
+            }
+            .readMore:hover, .readMore:focus{
+                color: rgb(123, 88, 19);
+            }
+        }
+    }
+}
+@media only screen and (min-width:480px)and(max-width:620px){
+    .section-review .container .all .cl-1{
+        height: auto !important; 
+    }
+    .section-review .container {
+        margin: 5rem auto 0 auto;
+        width: 87%;
+    }
+    .section-review{
+        background-image: linear-gradient(to right bottom, #bfacc942,#b89fc449);
+        padding: 0.2vw 0;
+        margin-bottom: 0!important;
+
+        .cl-1{
+            margin: 0 0 2rem 0 !important;
+        }
+
+        p{
+            font-size: 3vw;
+            letter-spacing: 0.1px;
+            word-spacing: 1px;
+            text-align: justify;
+            text-justify: inter-word;
+            line-height: 1.8;
+            font-family: 'Roboto',Arial, Helvetica, sans-serif !important;
+
+            span{
+                font-size: 3vw;
+                display: inline-block;
+                margin-top: 3rem;
+            }
+            .readMore{
+                margin-left: 35%;
+                cursor: pointer;
+            }
+            .readMore:hover, .readMore:focus{
+                color: rgb(123, 88, 19);
+            }
         }
     }
 }
@@ -815,18 +902,43 @@ body {
             }
         }
     }
-
-    .reviews-small{
+    .section-review .container .all .cl-1{
+        height: auto !important; 
+    }
+    .section-review .container {
+        margin: 5rem auto 0 auto;
+        width: 78%;
+    }
+    .section-review{
         background-image: linear-gradient(to right bottom, #bfacc942,#b89fc449);
-        padding: 6vw 0;
+        padding: 0.2vw 0;
         margin-bottom: 0!important;
+
+        .cl-1{
+            margin: 0 0 2rem 0 !important;
+        }
+
         p{
-            font-size: 1.5vw;
-            letter-spacing: 0.8px;
-            word-spacing: 1.2px;
+            font-size: 2vw;
+            letter-spacing: 0.1px;
+            word-spacing: 1px;
             text-align: justify;
             text-justify: inter-word;
-            line-height: 1.5;
+            line-height: 1.8;
+            font-family: 'Roboto',Arial, Helvetica, sans-serif !important;
+
+            span{
+                font-size: 2vw;
+                display: inline-block;
+                margin-top: 3rem;
+            }
+            .readMore{
+                margin-left: 55%;
+                cursor: pointer;
+            }
+            .readMore:hover, .readMore:focus{
+                color: rgb(123, 88, 19);
+            }
         }
     }
 }
@@ -1034,17 +1146,43 @@ body {
         }
         }   
     }
-    .reviews-small{
+    .section-review .container .all .cl-1{
+        height: auto !important; 
+    }
+    .section-review .container {
+        margin: 5rem auto 0 auto;
+        width: 78%;
+    }
+    .section-review{
         background-image: linear-gradient(to right bottom, #bfacc942,#b89fc449);
-        padding: 4vw 0;
+        padding: 0.2vw 0;
         margin-bottom: 0!important;
+
+        .cl-1{
+            margin: 0 0 2rem 0 !important;
+        }
+
         p{
             font-size: 1.3vw;
-            letter-spacing: 0.8px;
-            word-spacing: 1.2px;
+            letter-spacing: 0.1px;
+            word-spacing: 1px;
             text-align: justify;
             text-justify: inter-word;
-            line-height: 1.5;
+            line-height: 1.8;
+            font-family: 'Roboto',Arial, Helvetica, sans-serif !important;
+
+            span{
+                font-size: 1.2vw;
+                display: inline-block;
+                margin-top: 3rem;
+            }
+            .readMore{
+                margin-left: 74%;
+                cursor: pointer;
+            }
+            .readMore:hover, .readMore:focus{
+                color: rgb(123, 88, 19);
+            }
         }
     }
 }
@@ -1248,17 +1386,43 @@ body {
             }
         }
     }
-    .reviews-small{
+    .section-review .container .all .cl-1{
+        height: auto !important; 
+    }
+    .section-review .container {
+        margin: 5rem auto 0 auto;
+        width: 80%;
+    }
+    .section-review{
         background-image: linear-gradient(to right bottom, #bfacc942,#b89fc449);
-        padding: 4vw 0;
+        padding: 0.2vw 0;
         margin-bottom: 0!important;
+
+        .cl-1{
+            margin: 0 0 2rem 0 !important;
+        }
+
         p{
             font-size: 1.2vw;
-            letter-spacing: 0.8px;
-            word-spacing: 1.2px;
+            letter-spacing: 0.1px;
+            word-spacing: 1px;
             text-align: justify;
             text-justify: inter-word;
-            line-height: 1.5;
+            line-height: 1.8;
+            font-family: 'Roboto',Arial, Helvetica, sans-serif !important;
+
+            span{
+                font-size: 1.1vw;
+                display: inline-block;
+                margin-top: 3rem;
+            }
+            .readMore{
+                margin-left: 78%;
+                cursor: pointer;
+            }
+            .readMore:hover, .readMore:focus{
+                color: rgb(123, 88, 19);
+            }
         }
     }
 }
