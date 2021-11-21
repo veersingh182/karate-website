@@ -63,6 +63,8 @@ body {
   .header .bgColor_nav_small {
     height: 100vh !important;
     background-image: linear-gradient(to left top, #049882, #404a56); }
+  .header .menu_display_block {
+    display: block !important; }
   .header .navbar {
     z-index: 9999;
     position: relative;
@@ -253,7 +255,7 @@ body {
     cursor: pointer; }
   .header .navbar .nav .menu {
     right: 0;
-    top: 9rem;
+    top: 12rem;
     width: 100%;
     display: none;
     text-align: center; }
@@ -274,8 +276,6 @@ body {
       border-radius: none;
       box-shadow: none;
       background-image: none; }
-  .menu_display_block {
-    display: block !important; }
   .button-bordered {
     bottom: 18%;
     left: 16%; }

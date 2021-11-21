@@ -8,12 +8,10 @@ window.addEventListener('scroll',()=>{
 });
 
 let nav_small = document.getElementById('nav-small');
-let menu = document.getElementsByClassName('menu');
-
+let menu = document.getElementById('menu');
 nav_small.addEventListener('click',()=>{
-
+    
     navbar.classList.toggle('bgColor_nav_small');
-    navbar.classList.toggle('navbar-bg', windowPosition);
     menu.classList.toggle('menu_display_block');
 
 });

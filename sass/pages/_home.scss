@@ -33,12 +33,16 @@ body {
         height: 100vh !important;
         background-image: linear-gradient(to left top , #049882, #404a56);
     }
+    .menu_display_block{
+        display: block !important;
+    }
     .navbar {
         z-index: 9999;
         position: relative;
         width: 100%;
         position: fixed;
         padding-top: 7rem;
+        
 
         .logo{
             top: 30%;
@@ -299,7 +303,7 @@ body {
 
     .header .navbar .nav .menu {
         right: 0;
-        top: 9rem;
+        top: 12rem;
         width: 100%;
         display: none;
         text-align: center;
@@ -328,14 +332,6 @@ body {
         }
 
     }
-    .menu_display_block{
-        display: block !important;
-    }
-
-    // .header .navbar .nav #toggle:checked + .menu{
-    //     display: block;
-    // }
-
     .button-bordered{
         bottom: 18%;
         left: 16%;
