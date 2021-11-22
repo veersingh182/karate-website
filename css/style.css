@@ -101,22 +101,35 @@ body {
         top: 40%;
         right: 7rem;
         position: absolute; }
-        .header .navbar .nav .menu a {
+        .header .navbar .nav .menu > a {
           line-height: 7rem;
           font-size: 1.9rem;
           color: floralwhite;
           padding: 1rem 1.6rem;
           text-decoration: none;
           text-transform: capitalize; }
-          .header .navbar .nav .menu a:hover, .header .navbar .nav .menu a:focus, .header .navbar .nav .menu a::after, .header .navbar .nav .menu a::before {
+          .header .navbar .nav .menu > a:hover, .header .navbar .nav .menu > a:focus, .header .navbar .nav .menu > a::after, .header .navbar .nav .menu > a::before {
             border-radius: 3px;
             box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
             background-image: linear-gradient(-60deg, #1fa4bb, #167a8b, #0f6474); }
-          .header .navbar .nav .menu a:active {
+          .header .navbar .nav .menu > a:active {
             transform: translateY(2px);
             background-image: linear-gradient(-60deg, #1fa48c, #167a64, #0f645a);
             border-radius: 3px;
             box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4); }
+        .header .navbar .nav .menu ul > li a {
+          line-height: 4.4rem;
+          font-size: 1.9rem;
+          color: floralwhite;
+          padding: 1rem 1.6rem;
+          text-decoration: none;
+          text-transform: capitalize; }
+        .header .navbar .nav .menu ul > li:hover, .header .navbar .nav .menu ul > li:focus {
+          border-radius: 3px 3px 0 0;
+          box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
+          background-image: linear-gradient(to right top, #106a7b, #126e7f, #157586); }
+        .header .navbar .nav .menu ul > li > ul {
+          padding-top: 2rem; }
         .header .navbar .nav .menu a:not(:last-child) {
           margin-right: 1rem; }
       .header .navbar .nav label {
@@ -133,6 +146,8 @@ body {
     border-radius: 3px;
     box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
     background-image: linear-gradient(-60deg, #1fa48c, #167a64, #0f645a); }
+  .header .dropDownAboutUs > li {
+    height: auto; }
 
 .welcome_text {
   font-family: 'Roboto', sans-serif;
@@ -190,6 +205,74 @@ body {
 .section1 {
   margin: 22vw 0 26vw 0; }
 
+@media only screen and (min-width: 0px) {
+  .dropDownAboutUs {
+    position: none; }
+    .dropDownAboutUs li ul {
+      display: none;
+      position: none; }
+    .dropDownAboutUs li ul li a {
+      border-bottom: none; }
+    .dropDownAboutUs li:hover > ul,
+    .dropDownAboutUs li:focus > ul {
+      display: block; }
+    .dropDownAboutUs:hover {
+      height: 40rem;
+      margin-bottom: 30rem; }
+    .dropDownAboutUs:focus {
+      height: 40rem; } }
+
+@media only screen and (min-width: 942px) {
+  .dropDownAboutUs > li {
+    height: 100px !important; }
+  .dropDownAboutUs {
+    display: inline-block;
+    position: relative;
+    list-style: none; }
+    .dropDownAboutUs li ul {
+      display: none;
+      position: absolute;
+      list-style: none;
+      box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
+      background-image: linear-gradient(-60deg, #1fa4bb, #167a8b, #0f6474) !important;
+      width: 25vw;
+      margin-top: 9px;
+      border-radius: 0 0 5px 5px;
+      padding-bottom: 2rem; }
+      .dropDownAboutUs li ul li {
+        text-align: left;
+        height: 4.5rem;
+        display: block; }
+        .dropDownAboutUs li ul li a {
+          font-size: 1.2vw !important; }
+    .dropDownAboutUs li:hover ul {
+      display: block; } }
+
+@media only screen and (min-width: 1025px) {
+  .dropDownAboutUs > li {
+    height: 100px !important; }
+  .dropDownAboutUs {
+    display: inline-block;
+    position: relative;
+    list-style: none; }
+    .dropDownAboutUs li ul {
+      display: none;
+      position: absolute;
+      list-style: none;
+      background-image: linear-gradient(-60deg, #1fa4bb, #167a8b, #0f6474) !important;
+      width: 25vw;
+      margin-top: 13px;
+      border-radius: 0 0 5px 5px;
+      padding-bottom: 2rem; }
+      .dropDownAboutUs li ul li {
+        text-align: left;
+        height: 4.5rem;
+        display: block; }
+        .dropDownAboutUs li ul li a {
+          font-size: 1.2vw !important; }
+    .dropDownAboutUs li:hover ul {
+      display: block; } }
+
 @media only screen and (min-width: 1060px) {
   .header .navbar-bg {
     height: 11.5rem !important; }
@@ -200,6 +283,8 @@ body {
 
 @media only screen and (max-width: 1060px) {
   .header .navbar .nav .menu a {
+    font-size: 1.75rem; }
+  .header .navbar .nav .menu > ul li a {
     font-size: 1.75rem; }
   .header .navbar .nav .menu a:not(:last-child) {
     margin-right: 0.6rem; }
@@ -287,7 +372,13 @@ body {
   .header .navbar-bg a .logo_text {
     top: 4.8rem; }
   .header .navbar-bg a .logo {
-    top: 2.8rem !important; } }
+    top: 2.8rem !important; }
+  .header .navbar .nav .menu > ul li a {
+    font-size: 1.6rem !important; }
+  ul > li:hover, ul > li:focus {
+    border-radius: none !important;
+    box-shadow: none !important;
+    background-image: none !important; } }
 
 @media only screen and (max-width: 550px) {
   .header .navbar a .logo {
@@ -334,7 +425,9 @@ body {
   .header .navbar-bg a .logo_text {
     top: 3.8rem !important; }
   .header .navbar-bg a .logo {
-    top: 2.65rem !important; } }
+    top: 2.65rem !important; }
+  .header .navbar .nav .menu > ul li a {
+    font-size: 4vw !important; } }
 
 @media only screen and (min-width: 0) and (max-width: 620px) {
   .section1 .container {
@@ -1041,21 +1134,6 @@ body {
       .section-review p .readMore:hover, .section-review p .readMore:focus {
         color: #7b5813; } }
 
-.section-main {
-  background-color: #b5d2dd; }
-
-.header-aboutUs {
-  position: relative; }
-
-.header-aboutUs {
-  margin-bottom: 500rem; }
-  .header-aboutUs--Div {
-    top: 0;
-    height: 25vh;
-    width: 100%;
-    background-image: linear-gradient(to left top, #00c7a9, #313b47);
-    position: fixed; }
-
 .margin-top-25 {
   margin-top: 25rem; }
 
@@ -1097,3 +1175,89 @@ body {
     margin-bottom: 8vw; }
   .margin-bottom-15 {
     margin-bottom: 6vw; } }
+
+.header-navPages {
+  height: auto;
+  background-size: none;
+  background-image: none; }
+
+.section-main {
+  height: 40vh; }
+
+.navbar .nav .menu ul > li:hover,
+.navbar .nav .menu ul > li:focus {
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(to right top, #106a7b, #126e7f, #157586); }
+  .navbar .nav .menu ul > li:hover > a,
+  .navbar .nav .menu ul > li:focus > a {
+    border-radius: none !important;
+    box-shadow: none !important;
+    background-image: none !important; }
+
+@media only screen and (min-width: 0px) {
+  .dropDownAboutUs {
+    position: none; }
+    .dropDownAboutUs li ul {
+      display: none;
+      position: none; }
+    .dropDownAboutUs li ul li a {
+      border-bottom: none; }
+    .dropDownAboutUs li:hover > ul,
+    .dropDownAboutUs li:focus > ul {
+      display: block; }
+    .dropDownAboutUs:hover {
+      height: 40rem;
+      margin-bottom: 30rem; }
+    .dropDownAboutUs:focus {
+      height: 40rem; } }
+
+@media only screen and (min-width: 942px) {
+  .dropDownAboutUs > li {
+    height: 100px; }
+  .dropDownAboutUs {
+    display: inline-block;
+    position: relative;
+    list-style: none; }
+    .dropDownAboutUs li ul {
+      display: none;
+      position: absolute;
+      list-style: none;
+      background-image: linear-gradient(to left top, #404a56, #049882);
+      width: 25vw;
+      margin-top: 9px;
+      border-radius: 0 0 5px 5px;
+      padding-bottom: 3rem; }
+      .dropDownAboutUs li ul li {
+        text-align: left;
+        height: 4.5rem;
+        display: block; }
+        .dropDownAboutUs li ul li a {
+          font-size: 1.2vw !important; }
+    .dropDownAboutUs li:hover ul {
+      display: block; } }
+
+@media only screen and (min-width: 1025px) {
+  .dropDownAboutUs > li {
+    height: 100px; }
+  .dropDownAboutUs {
+    display: inline-block;
+    position: relative;
+    list-style: none; }
+    .dropDownAboutUs li ul {
+      display: none;
+      position: absolute;
+      list-style: none;
+      background-image: linear-gradient(to left top, #404a56, #049882);
+      width: 25vw;
+      margin-top: 13px;
+      border-radius: 0 0 5px 5px;
+      padding-bottom: 3rem; }
+      .dropDownAboutUs li ul li {
+        text-align: left;
+        height: 4.5rem;
+        display: block; }
+        .dropDownAboutUs li ul li a {
+          font-size: 1.2vw !important; }
+    .dropDownAboutUs li:hover ul {
+      display: block; } }

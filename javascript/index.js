@@ -15,3 +15,5 @@ nav_small.addEventListener('click',()=>{
     menu.classList.toggle('menu_display_block');
 
 });
+
+let WinWidth = screen.width >= 942;
