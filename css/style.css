@@ -1176,88 +1176,392 @@ body {
   .margin-bottom-15 {
     margin-bottom: 6vw; } }
 
-.header-navPages {
-  height: auto;
-  background-size: none;
-  background-image: none; }
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box; }
 
-.section-main {
-  height: 40vh; }
+html {
+  font-size: 62.5%; }
 
-.navbar .nav .menu ul > li:hover,
-.navbar .nav .menu ul > li:focus {
+.navbar .nav .menu ul > li:hover, .navbar .nav .menu ul > li:focus {
   border-radius: 3px 3px 0 0;
   box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
   background-image: linear-gradient(to right top, #106a7b, #126e7f, #157586); }
-  .navbar .nav .menu ul > li:hover > a,
-  .navbar .nav .menu ul > li:focus > a {
+  .navbar .nav .menu ul > li:hover > a, .navbar .nav .menu ul > li:focus > a {
     border-radius: none !important;
     box-shadow: none !important;
     background-image: none !important; }
 
 @media only screen and (min-width: 0px) {
-  .dropDownAboutUs {
-    position: none; }
-    .dropDownAboutUs li ul {
-      display: none;
-      position: none; }
-    .dropDownAboutUs li ul li a {
-      border-bottom: none; }
-    .dropDownAboutUs li:hover > ul,
-    .dropDownAboutUs li:focus > ul {
-      display: block; }
-    .dropDownAboutUs:hover {
-      height: 40rem;
-      margin-bottom: 30rem; }
-    .dropDownAboutUs:focus {
-      height: 40rem; } }
+  .header-navPages {
+    height: 10rem;
+    background-image: none; }
+  .section-main {
+    padding: 0 8vw; }
+    .section-main h2 {
+      margin-bottom: 15vw;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 6.5vw;
+      text-transform: uppercase;
+      background-image: linear-gradient(-20deg, #00c7a9, #313b47);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-shadow: 0.3rem 0.7rem 0.8rem rgba(0, 0, 0, 0.4);
+      text-align: center; }
+    .section-main p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 4.2vw;
+      line-height: 2;
+      color: #484848; }
+    .section-main div {
+      margin-bottom: 24vw; }
+  .HistoryPara span {
+    display: inline-block; }
+  .HistoryPara span:not(:last-child) {
+    margin-bottom: 2.5rem; }
+  .SelectionProcedurePara span {
+    display: inline-block; }
+  .SelectionProcedurePara span:not(:last-child) {
+    margin-bottom: 2.5rem; }
+  .academyOpportunities ul {
+    margin-top: 5rem;
+    padding: 0 8vw;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4.2vw;
+    line-height: 2;
+    color: #484848; }
+    .academyOpportunities ul li:not(:last-child) {
+      margin-bottom: 3vw; }
+  .academyInstructors > div > h3 {
+    font-size: 4vw;
+    text-transform: uppercase;
+    color: #231d50;
+    margin-bottom: 3rem;
+    font-family: 'Nunito Sans', sans-serif; }
+  .academyInstructors > div > img {
+    display: none; }
+  .GauravPratapSharma > h3 {
+    font-size: 4vw;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: #333333; }
+  .GauravPratapSharma p {
+    padding: 0 3vw; }
+    .GauravPratapSharma p span {
+      display: inline-block; }
+    .GauravPratapSharma p span:not(:last-child) {
+      margin-bottom: 2.5rem; }
+  .contact-us {
+    width: 80%;
+    margin: auto;
+    padding: 0 .5rem; }
+    .contact-us .contact-col {
+      margin-bottom: 8rem; }
+      .contact-us .contact-col div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px; }
+        .contact-us .contact-col div .fas {
+          font-size: 6vw;
+          color: black;
+          margin: 10px;
+          margin-right: 4vw; }
+        .contact-us .contact-col div .far {
+          font-size: 6vw;
+          color: black;
+          margin: 10px;
+          margin-right: 4vw; }
+        .contact-us .contact-col div p {
+          padding: 0;
+          font-size: 4vw; }
+        .contact-us .contact-col div h5 {
+          font-size: 4.3vw;
+          margin-bottom: 5px;
+          color: #555;
+          font-weight: 400; }
+    .contact-us .contact-col input, .contact-us .contact-col textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 17px;
+      outline: none;
+      border: 1px solid #ccc;
+      box-sizing: border-box; }
+    .contact-us .contact-col .btn_SendMessage {
+      cursor: pointer;
+      padding: 10px 14px;
+      background-image: linear-gradient(to left top, #049882, #404a56);
+      color: floralwhite;
+      border: none; }
+      .contact-us .contact-col .btn_SendMessage:hover {
+        background-image: linear-gradient(to left top, #027c6a, #272d35); } }
 
-@media only screen and (min-width: 942px) {
-  .dropDownAboutUs > li {
-    height: 100px; }
-  .dropDownAboutUs {
+@media only screen and (min-width: 400px) {
+  .header-navPages {
+    height: 33vw; }
+  .section-main {
+    padding: 0 7vw; }
+    .section-main h2 {
+      margin-bottom: 12vw;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 5.5vw;
+      text-transform: uppercase;
+      background-image: linear-gradient(-20deg, #00c7a9, #313b47);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-shadow: 0.3rem 0.7rem 0.8rem rgba(0, 0, 0, 0.4);
+      text-align: center; }
+    .section-main p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 4vw;
+      line-height: 1.8;
+      color: #484848; }
+    .section-main div {
+      margin-bottom: 24vw; }
+  .HistoryPara span:not(:last-child) {
     display: inline-block;
-    position: relative;
-    list-style: none; }
-    .dropDownAboutUs li ul {
-      display: none;
-      position: absolute;
-      list-style: none;
-      background-image: linear-gradient(to left top, #404a56, #049882);
-      width: 25vw;
-      margin-top: 9px;
-      border-radius: 0 0 5px 5px;
-      padding-bottom: 3rem; }
-      .dropDownAboutUs li ul li {
-        text-align: left;
-        height: 4.5rem;
-        display: block; }
-        .dropDownAboutUs li ul li a {
-          font-size: 1.2vw !important; }
-    .dropDownAboutUs li:hover ul {
-      display: block; } }
+    margin-bottom: 3.8rem; }
+  .SelectionProcedurePara span:not(:last-child) {
+    display: inline-block;
+    margin-bottom: 3.8rem; }
+  .academyOpportunities ul {
+    padding: 0 7vw;
+    margin-top: 9rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4vw;
+    line-height: 1.8;
+    color: #484848; }
+  .academyInstructors > div > h3 {
+    font-size: 3vw;
+    text-transform: uppercase;
+    color: #231d50;
+    margin-bottom: 4rem;
+    font-family: 'Nunito Sans', sans-serif; }
+  .academyInstructors > div > img {
+    display: none; }
+  .GauravPratapSharma > h3 {
+    font-size: 3vw;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    color: #333333; }
+  .GauravPratapSharma p {
+    padding: 0 3vw; }
+    .GauravPratapSharma p span {
+      display: inline-block; }
+    .GauravPratapSharma p span:not(:last-child) {
+      margin-bottom: 3rem; } }
 
-@media only screen and (min-width: 1025px) {
-  .dropDownAboutUs > li {
-    height: 100px; }
-  .dropDownAboutUs {
+@media only screen and (min-width: 500px) {
+  .header-navPages {
+    height: 20rem; }
+  .section-main {
+    padding: 0 8vw; }
+    .section-main h2 {
+      margin-bottom: 10vw;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 5vw;
+      text-transform: uppercase;
+      background-image: linear-gradient(-20deg, #00c7a9, #313b47);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-shadow: 0.3rem 0.7rem 0.8rem rgba(0, 0, 0, 0.4);
+      text-align: center; }
+    .section-main p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 3.3vw;
+      line-height: 1.74 !important;
+      color: #484848; }
+    .section-main div {
+      margin-bottom: 22vw; }
+    .section-main .HistoryPara span:not(:last-child) {
+      display: inline-block;
+      margin-bottom: 5rem; }
+    .section-main .SelectionProcedurePara span:not(:last-child) {
+      display: inline-block;
+      margin-bottom: 5rem; }
+  .HeadingOpportunities {
+    font-size: 4.4vw !important; }
+  .HeadingSelectionProcedure {
+    font-size: 4.4vw !important; }
+  .academyOpportunities ul {
+    margin-top: 5rem;
+    padding: 0 8vw;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.3vw;
+    line-height: 1.74 !important;
+    color: #484848; }
+  .academyInstructors > div > h3 {
     display: inline-block;
-    position: relative;
-    list-style: none; }
-    .dropDownAboutUs li ul {
-      display: none;
-      position: absolute;
-      list-style: none;
-      background-image: linear-gradient(to left top, #404a56, #049882);
-      width: 25vw;
-      margin-top: 13px;
-      border-radius: 0 0 5px 5px;
-      padding-bottom: 3rem; }
-      .dropDownAboutUs li ul li {
-        text-align: left;
-        height: 4.5rem;
-        display: block; }
-        .dropDownAboutUs li ul li a {
-          font-size: 1.2vw !important; }
-    .dropDownAboutUs li:hover ul {
-      display: block; } }
+    font-size: 2.7vw;
+    text-transform: uppercase;
+    color: #231d50;
+    margin-bottom: 5rem;
+    margin-top: 4rem;
+    font-family: 'Nunito Sans', sans-serif; }
+  .academyInstructors > div > img {
+    display: none; }
+  .GauravPratapSharma > h3 {
+    font-size: 2.7vw;
+    text-transform: uppercase;
+    margin-bottom: 4.5rem;
+    color: #333333; }
+  .GauravPratapSharma p {
+    padding: 0 3vw; }
+    .GauravPratapSharma p span {
+      display: inline-block; }
+    .GauravPratapSharma p span:not(:last-child) {
+      margin-bottom: 3rem; }
+  .contact-us {
+    width: 80%;
+    margin: auto;
+    padding: 0 .5rem; }
+    .contact-us .contact-col {
+      margin-bottom: 10rem; }
+      .contact-us .contact-col div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px; }
+        .contact-us .contact-col div .fas {
+          font-size: 3.7rem;
+          color: black;
+          margin: 10px;
+          margin-right: 4vw; }
+        .contact-us .contact-col div .far {
+          font-size: 3.7rem;
+          color: black;
+          margin: 10px;
+          margin-right: 4vw; }
+        .contact-us .contact-col div p {
+          padding: 0;
+          font-size: 1.8rem; }
+        .contact-us .contact-col div h5 {
+          font-size: 2.3rem;
+          margin-bottom: 5px;
+          color: #555;
+          font-weight: 400; }
+    .contact-us .contact-col input, .contact-us .contact-col textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 17px;
+      outline: none;
+      border: 1px solid #ccc;
+      box-sizing: border-box; }
+    .contact-us .contact-col .btn_SendMessage {
+      cursor: pointer;
+      padding: 10px 14px;
+      background-image: linear-gradient(to left top, #049882, #404a56);
+      color: floralwhite;
+      border: none; }
+      .contact-us .contact-col .btn_SendMessage:hover {
+        background-image: linear-gradient(to left top, #027c6a, #272d35); } }
+
+@media only screen and (min-width: 750px) {
+  .header-navPages {
+    height: 25rem; }
+  .section-main {
+    padding: 0 10vw; }
+    .section-main h2 {
+      margin-bottom: 9vw;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 4rem;
+      text-transform: uppercase;
+      background-image: linear-gradient(-20deg, #00c7a9, #313b47);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-shadow: 0.3rem 0.7rem 0.8rem rgba(0, 0, 0, 0.4);
+      text-align: center; }
+    .section-main p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 2.5rem;
+      line-height: 1.74 !important;
+      color: #484848; }
+    .section-main div {
+      margin-bottom: 20rem; }
+    .section-main .HistoryPara span:not(:last-child) {
+      display: inline-block;
+      margin-bottom: 5rem; }
+    .section-main .SelectionProcedurePara span:not(:last-child) {
+      display: inline-block;
+      margin-bottom: 5rem; }
+  .HeadingOpportunities {
+    font-size: 3.5rem !important; }
+  .HeadingSelectionProcedure {
+    font-size: 3.5rem !important; }
+  .academyOpportunities ul {
+    margin-top: 5rem;
+    padding: 0 5vw;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    line-height: 1.74 !important;
+    color: #484848; }
+  .academyInstructors > div > h3 {
+    display: inline-block;
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    color: #231d50;
+    margin-bottom: 10rem;
+    margin-top: 5rem;
+    font-family: 'Nunito Sans', sans-serif; }
+  .academyInstructors > div > img {
+    display: none; }
+  .GauravPratapSharma > h3 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    margin-bottom: 5.5rem;
+    color: #333333; }
+  .GauravPratapSharma p {
+    padding: 0 2.5rem; }
+    .GauravPratapSharma p span {
+      display: inline-block; }
+    .GauravPratapSharma p span:not(:last-child) {
+      margin-bottom: 3rem; } }
+
+@media only screen and (min-width: 1000px) {
+  .contact-us {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    margin-bottom: 8rem; }
+    .contact-us .contact-col {
+      flex: 1; }
+      .contact-us .contact-col div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px; }
+        .contact-us .contact-col div .fas {
+          font-size: 28px;
+          color: black;
+          margin: 10px;
+          margin-right: 30px; }
+        .contact-us .contact-col div .far {
+          font-size: 28px;
+          color: black;
+          margin: 10px;
+          margin-right: 30px; }
+        .contact-us .contact-col div p {
+          padding: 0;
+          font-size: 20px; }
+        .contact-us .contact-col div h5 {
+          font-size: 20px;
+          margin-bottom: 5px;
+          color: #555;
+          font-weight: 400; }
+    .contact-us .contact-col input, .contact-us .contact-col textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 17px;
+      outline: none;
+      border: 1px solid #ccc;
+      box-sizing: border-box; }
+    .contact-us .contact-col .btn_SendMessage {
+      cursor: pointer;
+      padding: 10px 14px;
+      background-image: linear-gradient(to left top, #049882, #404a56);
+      color: floralwhite;
+      border: none; }
+      .contact-us .contact-col .btn_SendMessage:hover {
+        background-image: linear-gradient(to left top, #027c6a, #272d35); } }
