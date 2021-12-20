@@ -1,71 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academy | Opportunities & Selection procedure </title>
-    <link rel="stylesheet" href="./css/style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Academy | Opportunities & Selection Procedure</title>
+        
+        <!-- favicon -->
+        <link rel="shortcut icon" href="./img/Karate Academy Logo.png" type="image/x-icon">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <!-- roboto font link  -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- hindi font link -->
+        <link href="https://fonts.googleapis.com/css2?family=Hind:wght@500;600&display=swap" rel="stylesheet">
 
-    <!-- roboto font link  -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
-    <!-- hindi font link -->
-    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@500;600&display=swap" rel="stylesheet">
-    <!-- 'Exo 2' font -->
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <!-- cookie font  -->
-    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
-    <!-- Poopins font  -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
-        rel="stylesheet">
-    <!-- Nunito Sans  -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet"> 
-    
-    <!-- footer-utilities -->
-    <script src="https://kit.fontawesome.com/3cd32005b1.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="css/FOOTER1.CSS">
-</head>
+        <!-- 'Exo 2' font -->
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- cookie font  -->
+        <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+        
+        <!-- Poopins font  -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        
+        <!-- Nunito Sans  -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet"> 
+        
+
+
+        <!-- css file -->
+        <link rel="stylesheet" href="./css/style.css">
+
+        <!-- footer -->
+        <script src="https://kit.fontawesome.com/3cd32005b1.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="./css/FOOTER1.CSS">
+        
+        
+    </head>
 
 <body>
 
     <header class="header header-navPages">
 
-        <nav class="navbar navbar-bg">
+        <nav class="navbar navbar-bg" id="navbar">
+
             <a href="./index.html">
                 <img src="./img/Karate Academy Logo.png" alt="academy_logo" class="logo">
             </a>
+
             <a href="./index.html">
                 <h2 class="logo_text">Martial Arts Karate <br> Academy NIT-Hamirpur</h2>
             </a>
 
             <div class="nav">
-                <label for="toggle" id="nav-small">&#9776</label>
-                <input type="checkbox" id="toggle">
+
+                <span id="nav-small">&#9776</span>
+
                 <div class="menu" id="menu">
+
                     <a href="./index.html" id="home">home</a>
+                    
                     <ul class="dropDownAboutUs" id="dropDownAboutUs">
-                        <li class="About_Us " id="AboutUs_InAboutUs"><a href="#" class="active">About Us &nbsp;<span style="transform: rotate(90deg); display: inline-block;">&#x27A7;</span></a>
-                            <ul>
+                        
+                        <li class="About_Us " id="AboutUs_InAboutUs">
+                            <a href= "javascript:void(0);" class="active active-small" >About Us <span style="transform: rotate(-90deg); display: inline-block;"> &crarr;</span>
+                            </a>
+                        
+                            <ul id="AboutUsSubSections">
+                        
                                 <li><a href="./MissionVissionHistory.html">Mission Vision History</a></li>
+                        
                                 <li><a href="./Instructors.html">Instructors</a></li>
+                        
                                 <li><a href="./OpportunitiesSelectionProcedure.html">Opportunities & Selection Process</a></li>
-                                <li><a href="./ContactUs.html">Contact Us</a></li>
+                        
+                                <li><a href="./ContactUs.html" id="ContactUsInAboutUS">Contact Us</a></li>
+                        
                             </ul>
+                        
                         </li>
+                    
                     </ul>
+                    
                     <a href="" id="members">members</a>
-                    <a href="./Events.html" id="events ">events</a>
-                    <a href="" id="blog">blog</a>
+                    
+                    <a href="./events.html" id="events">events</a>
+
+                    <a href="./Gallery.html" id="gallery">gallery</a>
+                    
+                    <a href="./Blogs.html" id="blog">blog</a>
+                
                 </div>
             </div>
+
         </nav>
+
     </header>
     
     <section class="section-main">
@@ -139,10 +175,6 @@
         </div>
         
     </footer>
-
-    <script type="text/javascript" src="slick/jQuery/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="slick/slick/slick.min.js"></script>
-    <script type="text/javascript" src="slick/js/main.js"></script>
     <script type="text/javascript" src="./javascript/MissionVissionHistory.js"></script>
    
 </body>

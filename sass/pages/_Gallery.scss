@@ -1,170 +1,119 @@
-@media only screen and (min-width:0px)and (max-width: 400px){
-    .gallery{
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 3rem;
-        >h2{
-            margin-bottom: 3rem;
-        }
-    
-        div{
-            position: relative;
-            img{
+@media only screen and (min-width: 0px){
+    main.gallery{
+        margin: 2rem 0 8rem 0;
+        .Gallery-div{
+            margin-top: 7rem;
+
+            a{
                 display: block;
-                width: 95%;
-                height: 70vw;
-                margin: 0 auto 1.7rem auto;
-                box-shadow: 0.3rem 0.7rem 0.8rem rgba(#000, .2);
-                border-radius: 7px;
-            }
-            p{
-                position: absolute;
-                bottom: 5%;
-                left: 50%;
-                transform: translate(-50%,-50%);
-                font-size: 1.6rem;
-                color: rgba(255, 250, 240, 0.898);
-                font-family: 'Roboto', sans-serif;
-                letter-spacing: 3px;
-                font-weight: 500;
-                z-index: 999;
-                text-align: center;
-                display: block;
-                width: 100%;
-                background-image: linear-gradient(-20deg, #00c7a9, #313b47);
-                padding: .7rem 0;
-                border-radius: 3px;
-                
-            }
-        }
-    }
-}
-@media only screen and (min-width:400px)and (max-width: 535px){
-    .gallery{
-        >h2{
-            margin-bottom: 5rem;
-        }
-    
-        div{
-            position: relative;
-            img{
-                display: block;
-                width: 90%;
-                height: 70vw;
-                margin: 0 auto 1.7rem auto;
-                box-shadow: 0.3rem 0.7rem 0.8rem rgba(#000, .2);
-                border-radius: 7px;
-            }
-            p{
-                position: absolute;
-                bottom: 5%;
-                left: 50%;
-                transform: translate(-50%,-50%);
-                font-size: 1.6rem;
-                color: rgba(255, 250, 240, 0.898);
-                font-family: 'Roboto', sans-serif;
-                letter-spacing: 3px;
-                font-weight: 500;
-                z-index: 999;
-                text-align: center;
-                display: block;
-                width: 95%;
-                background-image: linear-gradient(-20deg, #00c7a9, #313b47);
-                padding: 1rem 0;
-                border-radius: 3px;
-    
+                position: relative;
+                box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.212);
+
+                .Gallery-div_IMG{
+                    width: 100vw;
+                    height: 27rem;
+                    object-fit: cover !important;
+                }
+                div.Gallery-div_paraDiv{
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    clip-path: polygon(0 220px, 100% 130px, 100% 100%, 0px 100%);
+                    background-image: linear-gradient(to left top , #049882b6, #404a56a7);
+
+                    p{
+                        width: 30rem;
+                        font-size: 1.8rem;
+                        font-family: 'Nunito Sans', sans-serif;
+                        position: absolute;
+                        bottom: 2.6rem;
+                        right: 50%;
+                        transform: translateX(50%);
+                        font-weight: 700;
+                        letter-spacing: 1.5px;
+                        background-image:  linear-gradient(-70deg,#BBD2C5,#6dd5ed);
+                        color: transparent;
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        text-align: center;
+                        text-transform: uppercase;
+                        text-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+                    }
+                }
             }
         }
     }
 }
-@media only screen and (min-width:535px) and (max-width: 1000px){
-    .gallery{
-        >h2{
-            margin-bottom: 5rem;
-        }
-    
-        div{
-            position: relative;
-            img{
-                display: block;
-                width: 50rem;
-                height: 35rem;
-                margin: 0 auto 3.7rem auto;
-                box-shadow: 0.3rem 0.7rem 0.8rem rgba(#000, .2);
-                border-radius: 7px;
-            }
-            p{
-                position: absolute;
-                bottom: 10%;
-                left: 50%;
-                transform: translate(-50%,-50%);
-                font-size: 1.6rem;
-                color: rgba(255, 250, 240, 0.898);
-                font-family: 'Roboto', sans-serif;
-                letter-spacing: 3px;
-                font-weight: 500;
-                z-index: 999;
-                text-align: center;
-                display: block;
-                width: 53rem;
-                background-image: linear-gradient(-20deg, #00c7a9, #313b47);
-                padding: 1rem 0;
-                border-radius: 3px;
-    
+@media only screen and (min-width: 320px){
+    main.gallery{
+        margin: 6rem 0 9rem 0;
+        .Gallery-div{
+            margin-top: 9rem;
+
+            a{
+                .Gallery-div_IMG{
+                    height: 28rem;
+                }
+                div.Gallery-div_paraDiv{
+                    clip-path: polygon(0 220px, 100% 150px, 100% 100%, 0px 100%);
+                    p{
+                        width: 30rem;
+                        font-size: 2rem;
+                        bottom: 2rem;
+                    }
+                }
             }
         }
     }
 }
-@media only screen and (min-width:1000px){
-    .gallery{
-        >h2{
-            margin-bottom: 10rem;
+@media only screen and (min-width: 460px){
+    main.gallery{
+        margin: 3rem 0 9rem 0;
+
+        .Gallery-div{
+            margin-top: 9rem;
+            width: 46rem;
+            margin-left: auto;
+            margin-right: auto;
+
+            a{
+                .Gallery-div_IMG{
+                    height: 32rem;
+                    width: 100%;
+                }
+                div.Gallery-div_paraDiv{
+
+                    p{
+                        width: 35rem;
+                        font-size: 2.3rem;
+                        bottom: 4rem;
+                    }
+                }
+            }
         }
-        display: block;
-        margin: 2rem auto 5rem auto;
-        width: 99.2rem;
-        // border: 2px solid red;
-        div{
-            position: relative;
+    }
+}
+@media only screen and (min-width: 1050px){
+    main.gallery{
+        margin: 0 0 11rem 0;
+        width: 102rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        .Gallery-div{
             display: inline-block;
-            width: 45.3rem;
-            
-            img{
-                display: block;
-                width: 45rem;
-                height: 35rem;
-                margin: 0 auto 3.7rem auto;
-                box-shadow: 0.3rem 0.7rem 0.8rem rgba(#000, .2);
-                border-radius: 7px;
-            }
-            p{
-                position: absolute;
-                bottom: 10%;
-                left: 50%;
-                transform: translate(-50%,-50%);
-                font-size: 1.6rem;
-                color: rgba(255, 250, 240, 0.898);
-                font-family: 'Roboto', sans-serif;
-                letter-spacing: 1.7px;
-                font-weight: 500;
-                z-index: 999;
-                text-align: center;
-                display: block;
-                width: 47rem;
-                background-image: linear-gradient(-20deg, #00c7a9, #313b47);
-                padding: 1rem 0;
-                border-radius: 3px;
-    
-            }
+            margin-left: 3rem;
         }
-        .Parade{
-            margin-right: 8rem;
-        }
-        .Lalkaar{
-            margin-right: 8rem;
-        }
-        .trip{
-            margin-right: 8rem;
+    }
+}
+@media only screen and (min-width: 1300px){
+    main.gallery{
+        width: 120rem;
+
+        .Gallery-div{
+            display: inline-block;
+            margin-left: 9.5rem;
         }
     }
 }

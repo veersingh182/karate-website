@@ -35,6 +35,9 @@
                 width: 90vw;
                 display: block;
                 margin: 0 auto 1rem auto;
+                
+                height: 17rem;
+                object-fit: cover;
             }
             .event-img > .img:first-child{
                 margin-top: 3rem;
@@ -56,6 +59,8 @@
             }
             .event-img > .img {
                 width: 75%;
+                height: 18rem;
+                object-fit: cover;
             }
             .moreImages{
                 margin: 0 auto 2rem 4rem;
@@ -84,11 +89,16 @@
                 margin: 10rem auto;
                 width: 48.5rem;
                 
+                
                 .img{
                     width: 23rem;
                     display: inline-block;
                     margin: 0 !important;
                     padding: 0%;
+
+                    height: 17rem;
+                    object-fit: cover;
+
                     &-3{
                         display: none;
                     }
@@ -107,12 +117,14 @@
                 padding: 0;
                 display: block;
                 margin: 10rem auto;
-                width: 69.5rem;
+                width: 70rem;
             }
             .event-img > .img {
                 width: 22rem;
                 display: inline-block;
                 margin: 0 !important;
+                height: 17rem;
+                object-fit: cover;
                 &-3{
                     display: inline-block;
                 }
@@ -123,7 +135,6 @@
         }
     }
 }
-
 @media only screen and (min-width: 1100px){
     .events{
         display: block;
@@ -192,12 +203,17 @@
 
                 & > .img {
                     width: 24rem;
+                    height: 17rem;
+                    object-fit: cover;
+
                     display: block;
                     margin: 0% !important;
                     padding: 0%;
                     position: absolute;
                     z-index: 10;
                     transition: all .2s;
+                    border: 1px solid  rgba(255, 255, 255, 0.253);
+                    box-shadow: 0 0 1.2rem rgba(#000, .6);
 
                     &-1{
                         top: 3rem;
