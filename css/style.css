@@ -24,7 +24,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow-x: hidden; }
 
 html {
   font-size: 62.5%; }
@@ -32,8 +33,7 @@ html {
 body {
   font-size: 2rem;
   font-family: 'roboto', sans-serif;
-  background-color: #E4E6EB;
-  overflow-x: hidden; }
+  background-color: #E4E6EB; }
 
 a {
   text-decoration: none !important; }
