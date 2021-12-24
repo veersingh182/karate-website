@@ -79,14 +79,13 @@ a {
         font-size: 1.2rem;
         display: inline-block;
         margin-left: 1.6rem;
-        font-weight: 500;
+        font-weight: 600;
         color: rgba(255, 250, 240, 0.891);
         font-family: Arial, sans-serif; }
         .header .navbar a h2:hover, .header .navbar a h2:focus {
           color: floralwhite;
           text-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2); }
         .header .navbar a h2:active {
-          transform: translateY(0.4px);
           text-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3); }
       .header .navbar div#menu a:hover {
         color: #ebce84;
