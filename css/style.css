@@ -79,9 +79,9 @@ a {
         font-size: 1.2rem;
         display: inline-block;
         margin-left: 1.6rem;
-        font-weight: 600;
+        font-weight: 500;
         color: rgba(255, 250, 240, 0.891);
-        font-family: 'Rubik', Arial, sans-serif; }
+        font-family: Arial, sans-serif; }
         .header .navbar a h2:hover, .header .navbar a h2:focus {
           color: floralwhite;
           text-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2); }
@@ -302,7 +302,8 @@ a {
         border-bottom: none;
         padding: 1.7rem 1.3rem;
         color: floralwhite;
-        transition: all 0.3s ease-out; }
+        transition: all 0.3s ease-out;
+        text-transform: capitalize; }
       .header .navbar .nav .menu ul {
         display: inline-block;
         list-style: none; }
