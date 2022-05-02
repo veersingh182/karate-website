@@ -34,8 +34,6 @@ async function postData() {
     })
   
     if (container) {
-        // console.log( document.getElementsByClassName("sectionSider-div") );
-        // document.getElementsByClassName("sectionSider-div")[0].classList.add('visible-slide');
         container.innerHTML += reviewsHtml.toString().replaceAll(",", "");
     }
 

@@ -6,14 +6,19 @@ const models = require('./DB/models');
 const rankHolders = require ('./DB/module_RankHolders');
 const reviews = require('./DB/module_Reviews');
 const ContactUs = require('./DB/module_ContactUS');
+const Parade_Imgs = require('./DB/models_paradeImgs');
+const Kumite_Imgs = require('./DB/models_kumite');
+const Lalkar_Imgs = require('./DB/module_lalkar');
+const selfDefence_Imgs = require('./DB/models_Self-defense');
+const BeltGrading_Imgs = require('./DB/models_BeltGrading');
+const Trip_Imgs = require('./DB/models_Trips');
+const members_Data = require('./DB/models_Members');
 
 
 const cors = require('cors');
 
-
 const port = 8080;
 const app = express();
-
 
 console.log(__dirname);
 let public = path.join(__dirname,'./public')
@@ -100,7 +105,7 @@ app.get('/Kumite',(req,res)=>{
     res.status(200).render('kumite');
 });
 app.get('/Lalkar',(req,res)=>{
-    res.status(200).render('Lalkar');
+    res.status(200).render('Lalkaar');
 });
 app.get('/MissionVissionHistory',(req,res)=>{
     res.status(200).render('MissionVissionHistory');
@@ -123,19 +128,50 @@ app.get('/Members',(req,res)=>{
 
 app.get('/reviews', async (req,res)=>{
     let resultReviews = await reviews.find({ });
-    console.log(resultReviews);
     res.send(resultReviews);
 });
 
-let a = {
-    Name : "abcd",
-    Email : "ashd@gmail.com",
-    Message : "{ type : String}"
-};
+app.get('/ParadeImgs', async (req,res)=>{
+    let ParadeImgsData = await Parade_Imgs.find({ });
+    res.send(ParadeImgsData);
+});
+
+app.get('/KumiteImgs', async (req,res)=>{
+    let KumiteImgsData = await Kumite_Imgs.find({ });
+    res.send(KumiteImgsData);
+});
+
+app.get('/LalkarImgs', async (req,res)=>{
+    let LalkarImgsData = await Lalkar_Imgs.find({ });
+    res.send(LalkarImgsData);
+});
+
+app.get('/selfDefenceImgs', async (req,res)=>{
+    let selfDefenceImgsData = await selfDefence_Imgs.find({ });
+    res.send(selfDefenceImgsData);
+});
+
+app.get('/BeltGradingImgs', async (req,res)=>{
+    let selfDefenceImgsData = await BeltGrading_Imgs.find({ });
+    res.send(selfDefenceImgsData);
+});
+
+app.get('/TripImgs', async (req,res)=>{
+    let TripImgsData = await Trip_Imgs.find({ });
+    res.send(TripImgsData);
+});
+
+app.get('/MembersData', async (req,res)=>{
+    let Data = await members_Data.find({ });
+    res.send(Data);
+});
+
+
+
 app.post('/contactUS', async (req,res)=>{
     let bodyData = ContactUs(req.body);
     let contactUSPromise;
-    console.log(req.body);
+    // console.log(req.body);
     try {
         //  Block of code to try
         contactUSPromise = await bodyData.save();
@@ -157,9 +193,6 @@ app.post('/contactUS', async (req,res)=>{
         });
     }
 });
-
-
-
 
 app.listen(port,()=>{
     console.log("listning to prot no : " , port);
