@@ -819,10 +819,13 @@ a{
             position: relative;
 
             & > img{
-                width: 28vw;
+                width: 30vw;
+                height: 30vw;
+                object-fit: cover;
                 position: absolute;
                 top: 0%;
                 left: 0%;
+                border-radius: 50%;
             }
             &>div{
                 position: absolute;
@@ -871,11 +874,13 @@ a{
 
             & > img{
                 margin-left: 10%;
-                width: 130px;
+                width: 120px;
+                height: 120px;
                 position: absolute;
                 top: 0%;
                 left: 0%;
                 transform: skew(15deg);
+                box-shadow: 0 1rem 1rem rgba(#000, .25);
             }
 
             &>div{
@@ -918,6 +923,8 @@ a{
             & > img{
                 margin-left: 4vw;
                 width: 10vw;
+                height: 10vw;
+
             }
             &>div{
                 position: absolute;
@@ -950,6 +957,7 @@ a{
             & > img{
                 margin-left: 7rem;
                 width: 150px;
+                height: 150px;
             }
             &>div{
                 left: 27rem;

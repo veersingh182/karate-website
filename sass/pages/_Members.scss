@@ -1,0 +1,154 @@
+@media only screen and (min-width : 0px){
+    .membersPicsBox{
+        margin-bottom: 15rem;
+    }
+    .memberBox{
+        display: block;
+        width: fit-content;
+        margin-right: auto;
+        margin-left: auto;
+        font-family: 'Nunito Sans', sans-serif;
+        
+    }
+
+    .headingCurrentMember{
+        margin-top: 4rem;
+        margin-bottom: 6rem;
+    }
+    .profileBox{
+        margin: 5rem 0;
+    }
+    .profileBox > img {
+        width: 18rem;
+        height: 18rem;
+        border-radius: 50%;
+        object-fit: cover !important;
+    
+    }
+    .profileBox > p > span {
+        display: block;
+    } 
+    .profileBox > p {
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 1.5rem;
+    }
+    .profileBox > p > .designation{
+        font-size: 1.3rem;
+    }
+
+    .profileBox > .cadetName{
+        display: none;
+    }
+
+}
+@media only screen and (min-width : 500px){
+    .membersPicsBox{
+        transform: translateY(-5rem);
+    }
+    .memberBox{
+        display: block;
+        width: 50rem;
+    }
+    .profileBox{
+        display: inline-block;
+        margin-left: 3.5rem;
+        margin-right: 3rem;
+    
+    }
+
+}
+@media only screen and (min-width : 610px){
+    .membersPicsBox{
+        transform: translateY(-7rem);
+    }
+    .memberBox{
+        display: block;
+        width: 61rem;
+    }
+    .profileBox{
+        display: inline-block;
+        margin-left: 6rem;
+        margin-right: 6rem;
+    
+    }
+}
+@media only screen and (min-width : 814px){
+    
+    .profileBox > .cadetName{
+        display: block;
+    }
+    .membersPicsBox .headingCurrentMember {
+        text-align: center;
+        margin-top: 5rem;
+        text-transform: capitalize;
+        margin-bottom: 7rem;
+    }
+    .memberBox{
+        display: block;
+        width: 78rem;
+        margin: 0 auto;
+    }
+    .profileBox{
+        display: inline-block;
+        
+        position: relative;
+        margin-left: 4rem;
+
+        margin-right: 3rem;
+        margin-bottom: 8rem;
+    }
+    .membersPicsBox .profileBox>img{
+        width: 18rem;
+        height: 18rem;
+        border-radius: 50%;
+    }
+    .membersPicsBox .profileBox>.details{
+        display: none;
+        width: 100%;
+        text-align: center;
+        font-size: 1.4rem;
+        position: absolute;
+        bottom: 5rem;
+        color: black;
+        padding-bottom: 0.6rem;
+        padding-top: 0.6rem;
+        // background-color: rgba(255, 255, 255, 0.616);
+        background-color: #e4e6ebc2;
+        transition: all 1.2s ease !important;
+    }
+    .membersPicsBox .profileBox>.details span{
+        display: block;
+        width: 100%;
+    }
+    .membersPicsBox .profileBox>.details span.name{
+        font-size: 1.8rem;
+        text-transform: capitalize;
+    }
+    .membersPicsBox .profileBox>.cadetName{
+        margin-top: 0.8rem;
+        text-align: center;
+        font-size: 2rem;
+        text-transform: capitalize;
+    }
+    .profileBox:hover .cadetName{
+        visibility: hidden;
+    }
+    
+    .profileBox:hover .details{
+        display: block;
+    }
+}
+@media only screen and (min-width : 1130px){
+
+    .memberBox{
+        width: 103rem;
+    }
+    .profileBox{
+        position: relative;
+        margin-left: 4rem;
+
+        margin-right: 3rem;
+        margin-bottom: 8rem;
+    }
+}

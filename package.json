@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^6.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
   }
 }
