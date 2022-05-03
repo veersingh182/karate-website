@@ -17,7 +17,7 @@ const members_Data = require('./DB/models_Members');
 
 const cors = require('cors');
 
-const port = 8080;
+const port = process.env.PORT || 8080;
 const app = express();
 
 console.log(__dirname);
