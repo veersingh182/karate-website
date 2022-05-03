@@ -29,6 +29,10 @@ app.use(bodyParser.urlencoded({extended : true}));
 
 app.set('view engine', 'hbs');
 
+app.get('/',(req,res)=>{
+    res.send("hello");
+})
+
 app.get('/', async (req,res)=>{
     let result;
     let result_RankHolders;
@@ -41,6 +45,7 @@ app.get('/', async (req,res)=>{
     catch(err){
         console.log(err);
     }
+
 
     res.status(200).render('index',{
 
