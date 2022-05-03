@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
-const reviews = require('../database/DB/module_Reviews');
+const reviews = require('../DB/module_Reviews');
 
 
 const port = 3000;
